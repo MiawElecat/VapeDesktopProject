@@ -26,11 +26,11 @@ public class ModelDetailRestok {
         this.mod_id_restok = mod_id_restok;
     }
 
-    public ModelDataProduk getMod_id_data_produk() {
+    public ModelProduk getMod_id_data_produk() {
         return mod_id_data_produk;
     }
 
-    public void setMod_id_data_produk(ModelDataProduk mod_id_data_produk) {
+    public void setMod_id_data_produk(ModelProduk mod_id_data_produk) {
         this.mod_id_data_produk = mod_id_data_produk;
     }
 
@@ -59,7 +59,7 @@ public class ModelDetailRestok {
     }
     private String iddetail_restok;
     private ModelReStok mod_id_restok;
-    private ModelDataProduk mod_id_data_produk;
+    private ModelProduk mod_id_data_produk;
     private int jumlah_restok;
     private double subtotal_harga;
     private String status;

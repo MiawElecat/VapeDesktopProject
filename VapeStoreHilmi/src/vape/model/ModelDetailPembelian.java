@@ -26,11 +26,11 @@ public class ModelDetailPembelian {
         this.mod_id_pembelian = mod_id_pembelian;
     }
 
-    public ModelDataProduk getMod_id_data_produk() {
+    public ModelProduk getMod_id_data_produk() {
         return mod_id_data_produk;
     }
 
-    public void setMod_id_data_produk(ModelDataProduk mod_id_data_produk) {
+    public void setMod_id_data_produk(ModelProduk mod_id_data_produk) {
         this.mod_id_data_produk = mod_id_data_produk;
     }
 
@@ -59,7 +59,7 @@ public class ModelDetailPembelian {
     }
     private String iddetail_pembelian;
     private ModelPembelian mod_id_pembelian;
-    private ModelDataProduk mod_id_data_produk;
+    private ModelProduk mod_id_data_produk;
     private int jumlah_pembelian;
     private double subtotal_harga;
     private String status;

@@ -10,11 +10,11 @@ package vape.model;
  */
 public class ModelTransaksiSementara {
 
-    public ModelDataProduk getMod_id_data_produk() {
+    public ModelProduk getMod_id_data_produk() {
         return mod_id_data_produk;
     }
 
-    public void setMod_id_data_produk(ModelDataProduk mod_id_data_produk) {
+    public void setMod_id_data_produk(ModelProduk mod_id_data_produk) {
         this.mod_id_data_produk = mod_id_data_produk;
     }
 
@@ -49,7 +49,7 @@ public class ModelTransaksiSementara {
     public void setSubtotal_harga(double subtotal_harga) {
         this.subtotal_harga = subtotal_harga;
     }
-    private ModelDataProduk mod_id_data_produk;
+    private ModelProduk mod_id_data_produk;
     private String nama_produk;
     private double harga_jual;
     private int jumlah_barang;

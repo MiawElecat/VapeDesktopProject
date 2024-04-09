@@ -26,11 +26,11 @@ public class ModelDetailTransaksi {
         this.mod_id_transaksi = mod_id_transaksi;
     }
 
-    public ModelDataProduk getMod_id_data_produk() {
+    public ModelProduk getMod_id_data_produk() {
         return mod_id_data_produk;
     }
 
-    public void setMod_id_data_produk(ModelDataProduk mod_id_data_produk) {
+    public void setMod_id_data_produk(ModelProduk mod_id_data_produk) {
         this.mod_id_data_produk = mod_id_data_produk;
     }
 
@@ -52,7 +52,7 @@ public class ModelDetailTransaksi {
 
     private String iddetail_tranaksi;
     private ModelTransaksi mod_id_transaksi;
-    private ModelDataProduk mod_id_data_produk;
+    private ModelProduk mod_id_data_produk;
     private int jumlah_barang;
     private double subtotal_harga;
 }
