@@ -11,7 +11,7 @@ import vape.model.ModelPengguna;
  */
 public interface ServicePengguna {
     
-    void prosesLogin (ModelPengguna mod_login);
+    void prosesLogin    (ModelPengguna mod_login);
     
     void tambahData     (ModelPengguna mod_pengguna );
     void perbaruiData   (ModelPengguna mod_pengguna);

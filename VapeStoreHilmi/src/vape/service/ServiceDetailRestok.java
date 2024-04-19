@@ -12,11 +12,11 @@ import vape.model.ModelDetailRestok;
  * @author JUL
  */
 public interface ServiceDetailRestok {
-    void tambahData (ModelDetailRestok mod_det_restok);
-    void jumTotal (ModelDetailRestok mod_det_restok);
-    void hapusSementara (ModelDetailRestok mod_det_restok);
-    void updateStatus (ModelDetailRestok mod_det_restok);
-    boolean validasiStatus(ModelDetailRestok mod_det_restok);
+    void tambahData         (ModelDetailRestok mod_det_restok);
+    void jumTotal           (ModelDetailRestok mod_det_restok);
+    void hapusSementara     (ModelDetailRestok mod_det_restok);
+    void updateStatus       (ModelDetailRestok mod_det_restok);
+    boolean validasiStatus  (ModelDetailRestok mod_det_restok);
     
     ModelDetailRestok getByid (String id);
     
