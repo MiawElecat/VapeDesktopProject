@@ -27,7 +27,7 @@ public class Menu extends JPanel {
         {"Penjualan"},
         {"Pembelian"},
         {"~Master~"},
-        {"Data Master", "Data Produk", "Distributor", "Data Pengguna"},
+        {"Data Master", "Data Produk", "Distributor", "Kategori", "Data Pengguna"},
         {"~Laporan~"},
         {"Penjualan"},
         {"Pembelian"},

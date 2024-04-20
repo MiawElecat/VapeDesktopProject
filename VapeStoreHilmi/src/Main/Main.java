@@ -4,6 +4,7 @@ import Form.FormDashboard;
 import Form.FormDataPengguna;
 import Form.FormDataProduk;
 import Form.FormDistributor;
+import Form.FormKategori;
 import Form.FormPembelian;
 import Form.FormPenjualan;
 import Form.FormRestock;
@@ -82,7 +83,9 @@ public class Main extends JLayeredPane {
                 } else if (subIndex == 2) {
                     MenuUtama.showForm(new FormDistributor()); 
                 } else if (subIndex == 3) {
-                    MenuUtama.showForm(new FormDataPengguna()); 
+                    MenuUtama.showForm(new FormKategori());
+                } else if (subIndex == 4) {
+                    MenuUtama.showForm(new FormDataPengguna());
                 } else {
                     action.cancel();
                 }
