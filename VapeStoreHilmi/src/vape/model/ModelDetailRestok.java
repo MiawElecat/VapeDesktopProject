@@ -18,11 +18,11 @@ public class ModelDetailRestok {
         this.iddetail_restok = iddetail_restok;
     }
 
-    public ModelReStok getMod_id_restok() {
+    public ModelRestok getMod_id_restok() {
         return mod_id_restok;
     }
 
-    public void setMod_id_restok(ModelReStok mod_id_restok) {
+    public void setMod_id_restok(ModelRestok mod_id_restok) {
         this.mod_id_restok = mod_id_restok;
     }
 
@@ -58,7 +58,7 @@ public class ModelDetailRestok {
         this.status = status;
     }
     private String iddetail_restok;
-    private ModelReStok mod_id_restok;
+    private ModelRestok mod_id_restok;
     private ModelProduk mod_id_data_produk;
     private int jumlah_restok;
     private double subtotal_harga;

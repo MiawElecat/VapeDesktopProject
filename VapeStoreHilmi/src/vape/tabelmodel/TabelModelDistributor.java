@@ -8,24 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
-import vape.model.ModelProduk;
+import vape.model.ModelDistributor;
 
 /**
  *
  * @author JUL
  */
-public class TabelModelProduk extends AbstractTableModel {
+public class TabelModelDistributor extends AbstractTableModel{
     
-    private List<ModelProduk> list = new ArrayList<>();
+    private List<ModelDistributor> list = new ArrayList<>();
     
-    public void tambahData (ModelProduk mod_produk){
-        list.add( mod_produk);
+    public void tambahData (ModelDistributor mod_distributor){
+        list.add( mod_distributor);
         fireTableRowsInserted(list.size()-1, list.size()-1);
         JOptionPane.showMessageDialog(null, "Data Berhasil ditambahkan");
     }
     
-    public void perbaruiData (int row, ModelProduk mod_produk){
-        list.add( row,mod_produk);
+    public void perbaruiData (int row, ModelDistributor mod_distributor){
+        list.add( row,mod_distributor);
         fireTableDataChanged();
         JOptionPane.showMessageDialog(null, "Data Berhasil diperbarui");
     }
@@ -38,27 +38,27 @@ public class TabelModelProduk extends AbstractTableModel {
         list.clear();
         fireTableDataChanged();
     }
-    public void setData(List<ModelProduk>list){
+    public void setData(List<ModelDistributor>list){
         clear();
         this.list.addAll(list);
         fireTableDataChanged();
         
     }
-    public void setData(int index, ModelProduk mod_produk){
-        list.set(index, mod_produk);
+    public void setData(int index, ModelDistributor mod_distributor){
+        list.set(index, mod_distributor);
         fireTableRowsUpdated(index, index);
         
     }
-    public ModelProduk getData(int index){
+    public ModelDistributor getData(int index){
         return list.get(index);
     }
 
     @Override
     public int getRowCount() {
-        return list.size();
+        return list.size();    
     }
     
-    private final String[] namaKolom = {"No","Kode Barang","Kode Distributor","Nama Produk","Kode Barcode","Kode Kategori","Harga Beli","Harga Jual","Stok","Status"};
+    private final String[] namaKolom = {"No","Kode Disributor","Nama Distributor","Alamat","No Telepon"};
 
     @Override
     public int getColumnCount() {
@@ -67,29 +67,25 @@ public class TabelModelProduk extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
- if (columnIndex == 0){
-            return"   " + (rowIndex + 1);
+         if (columnIndex== 0){
+            return"" + (rowIndex + 1);
         }else{
         switch (columnIndex -1){
-        case 0:return list.get(rowIndex).getId_data_produk();
-        case 1:return list.get(rowIndex).getMod_id_distributor().getId_distributor();
-        case 2:return list.get(rowIndex).getNama_produk();
-        case 3:return list.get(rowIndex).getBarcode();
-        case 4:return list.get(rowIndex).getMod_idkategori().getIdkategori();
-        case 5:return list.get(rowIndex).getHarga_beli();
-        case 6:return list.get(rowIndex).getHarga_jual();
-        case 7:return list.get(rowIndex).getJumlah_stok();
-        case 8:return list.get(rowIndex).getStatus();
+        
+        case 0:return list.get(rowIndex).getId_distributor();
+        case 1:return list.get(rowIndex).getNama_distributor();
+        case 2:return list.get(rowIndex).getAlamat_distributor();
+        case 3:return list.get(rowIndex).getNo_tlp_distributor();
+        
         default: return null;
-            }
         }
     }
-     public String getColumnName(int column){
-        if (column == 0){
-            return "   " + namaKolom[column];
+    }
+    public String getColumnName(int column){
+         if (column == 0){
+            return "" + namaKolom[column];
         }else{
             return namaKolom[column];
         }
-    }
-    
+    }    
 }

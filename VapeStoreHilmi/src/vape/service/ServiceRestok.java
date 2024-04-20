@@ -4,19 +4,19 @@
  */
 package vape.service;
 import java.util.List;
-import vape.model.ModelReStok;
+import vape.model.ModelRestok;
 
 /**
  *
  * @author JUL
  */
 public interface ServiceRestok {
-    void tambahData     (ModelReStok mod_restok);
+    void tambahData     (ModelRestok mod_restok);
     void perbaruiStatus (String mod_restok);
  
-    ModelReStok getByid (String id);
+    ModelRestok getByid (String id);
     
-    List<ModelReStok> getData();
-    List<ModelReStok> search(String id);
+    List<ModelRestok> getData();
+    List<ModelRestok> search(String id);
     String nomor();
 }

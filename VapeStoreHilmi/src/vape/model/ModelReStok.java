@@ -8,7 +8,7 @@ package vape.model;
  *
  * @author JUL
  */
-public class ModelReStok {
+public class ModelRestok {
 
     public String getId_restok() {
         return id_restok;

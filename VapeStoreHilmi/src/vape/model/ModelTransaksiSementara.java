@@ -10,48 +10,23 @@ package vape.model;
  */
 public class ModelTransaksiSementara {
 
-    public ModelProduk getMod_id_data_produk() {
-        return mod_id_data_produk;
+    public ModelProduk getMod_dataproduk() {
+        return mod_dataproduk;
     }
 
-    public void setMod_id_data_produk(ModelProduk mod_id_data_produk) {
-        this.mod_id_data_produk = mod_id_data_produk;
+    public void setMod_dataproduk(ModelProduk mod_dataproduk) {
+        this.mod_dataproduk = mod_dataproduk;
     }
 
-    public String getNama_produk() {
-        return nama_produk;
+    public ModelDetailTransaksi getMod_dettransaksi() {
+        return mod_dettransaksi;
     }
 
-    public void setNama_produk(String nama_produk) {
-        this.nama_produk = nama_produk;
+    public void setMod_dettransaksi(ModelDetailTransaksi mod_dettransaksi) {
+        this.mod_dettransaksi = mod_dettransaksi;
     }
 
-    public double getHarga_jual() {
-        return harga_jual;
-    }
+    private ModelProduk mod_dataproduk;
+    private ModelDetailTransaksi mod_dettransaksi;
 
-    public void setHarga_jual(double harga_jual) {
-        this.harga_jual = harga_jual;
-    }
-
-    public int getJumlah_barang() {
-        return jumlah_barang;
-    }
-
-    public void setJumlah_barang(int jumlah_barang) {
-        this.jumlah_barang = jumlah_barang;
-    }
-
-    public double getSubtotal_harga() {
-        return subtotal_harga;
-    }
-
-    public void setSubtotal_harga(double subtotal_harga) {
-        this.subtotal_harga = subtotal_harga;
-    }
-    private ModelProduk mod_id_data_produk;
-    private String nama_produk;
-    private double harga_jual;
-    private int jumlah_barang;
-    private double subtotal_harga;
 }

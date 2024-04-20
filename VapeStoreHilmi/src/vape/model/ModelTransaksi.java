@@ -42,8 +42,27 @@ public class ModelTransaksi {
         this.total_harga = total_harga;
     }
 
+    public Double getBayar() {
+        return bayar;
+    }
+
+    public void setBayar(Double bayar) {
+        this.bayar = bayar;
+    }
+
+    public Double getKembali() {
+        return kembali;
+    }
+
+    public void setKembali(Double kembali) {
+        this.kembali = kembali;
+    }
+
+
     private String id_transaksi;
     private ModelPengguna mod_id_pengguna;
     private String tanggal_transaksi;
     private Double total_harga;
+    private Double bayar;
+    private Double kembali;
 }
