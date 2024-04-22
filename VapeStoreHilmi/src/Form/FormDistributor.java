@@ -4,17 +4,32 @@
  */
 package Form;
 
+import java.util.List;
+import javax.swing.JOptionPane;
+import vape.DAO.DAO_Distributor;
+import vape.model.ModelDistributor;
+import vape.service.ServiceDistributor;
+import vape.tabelmodel.TabelModelDistributor;
+
 /**
  *
  * @author Miaw
  */
 public class FormDistributor extends javax.swing.JPanel {
+    
+    private ServiceDistributor service = new DAO_Distributor();
+    private TabelModelDistributor tabel = new TabelModelDistributor();
 
     /**
      * Creates new form FormDataSupplier
      */
     public FormDistributor() {
         initComponents();
+        
+        
+        tabeldistributor.setModel(tabel);
+        loadData();
+        btnBatal.setVisible(false);
     }
 
     /**
@@ -34,17 +49,18 @@ public class FormDistributor extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabeldistributor = new javax.swing.JTable();
+        btnBatal = new javax.swing.JButton();
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        txtIdProduk = new javax.swing.JTextField();
-        txtBarcode = new javax.swing.JTextField();
-        txtDistributor = new javax.swing.JTextField();
-        txtProduk = new javax.swing.JTextField();
+        txtIdDistributor = new javax.swing.JTextField();
+        txtNama = new javax.swing.JTextField();
+        txtAlamat = new javax.swing.JTextField();
+        txtNomor = new javax.swing.JTextField();
         btnSimpan4 = new javax.swing.JButton();
         btnBatal4 = new javax.swing.JButton();
         pnHeaderTambah = new javax.swing.JPanel();
@@ -68,19 +84,14 @@ public class FormDistributor extends javax.swing.JPanel {
         });
 
         txtPencarian.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtPencarian.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPencarianActionPerformed(evt);
-            }
-        });
         txtPencarian.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPencarianKeyReleased(evt);
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabeldistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tabeldistributor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -91,8 +102,23 @@ public class FormDistributor extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setRowHeight(30);
-        jScrollPane2.setViewportView(jTable1);
+        tabeldistributor.setRowHeight(30);
+        tabeldistributor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabeldistributorMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tabeldistributor);
+
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBatalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -108,11 +134,15 @@ public class FormDistributor extends javax.swing.JPanel {
                         .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1128, Short.MAX_VALUE)
                             .addGroup(pnUtamaLayout.createSequentialGroup()
-                                .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(btnTambah))
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(pnUtamaLayout.createSequentialGroup()
+                                .addComponent(btnTambah)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnBatal)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 23, 23)))))
                 .addContainerGap())
         );
         pnUtamaLayout.setVerticalGroup(
@@ -125,7 +155,8 @@ public class FormDistributor extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
                 .addGap(30, 30, 30))
@@ -147,13 +178,18 @@ public class FormDistributor extends javax.swing.JPanel {
         jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel42.setText("No. Telepon");
 
-        txtIdProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIdDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIdDistributor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtIdDistributorMouseClicked(evt);
+            }
+        });
 
-        txtBarcode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNama.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtAlamat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNomor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
         btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -214,10 +250,10 @@ public class FormDistributor extends javax.swing.JPanel {
                             .addComponent(jLabel42))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtIdProduk, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
-                            .addComponent(txtBarcode)
-                            .addComponent(txtDistributor)
-                            .addComponent(txtProduk)))
+                            .addComponent(txtIdDistributor, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+                            .addComponent(txtNama)
+                            .addComponent(txtAlamat)
+                            .addComponent(txtNomor)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(218, 218, 218)
                         .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,18 +269,18 @@ public class FormDistributor extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
-                    .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel41))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel42))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -272,25 +308,43 @@ public class FormDistributor extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
-        mainPanel.removeAll();
-        mainPanel.repaint();
-        mainPanel.revalidate();
+         if(btnTambah.getText().equals("Tambah Distributor")){
+            mainPanel.removeAll();
+            mainPanel.repaint();
+            mainPanel.revalidate();
 
-        mainPanel.add(pnTambah);
-        mainPanel.repaint();
-        mainPanel.revalidate();
+            mainPanel.add(pnTambah);
+            mainPanel.repaint();
+            mainPanel.revalidate();
+            txtIdDistributor.setText(service.nomor()); 
+        }else if(btnTambah.getText().equals("Ubah")){
+            mainPanel.removeAll();
+            mainPanel.repaint();
+            mainPanel.revalidate();
+
+            mainPanel.add(pnTambah);
+            mainPanel.repaint();
+            mainPanel.revalidate();
+            dataTabel();
+        }
+        
     }//GEN-LAST:event_btnTambahActionPerformed
 
-    private void txtPencarianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPencarianActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPencarianActionPerformed
-
     private void txtPencarianKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPencarianKeyReleased
-  
+        List<ModelDistributor> search = service.search(txtPencarian.getText());
+        tabel.setData(search);
     }//GEN-LAST:event_txtPencarianKeyReleased
 
     private void btnSimpan4btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan4btnSimpanActionPerformed
-        // TODO add your handling code here:
+        if(btnSimpan4.getText().equals("Perbarui")){
+            perbaruiData();
+            mainPanel.removeAll();
+            mainPanel.add(pnUtama);
+            mainPanel.repaint();
+            mainPanel.revalidate();
+        }else if(btnSimpan4.getText().equals("Simpan")){
+            SimpanData();
+        }
     }//GEN-LAST:event_btnSimpan4btnSimpanActionPerformed
 
     private void btnBatal4btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal4btnBatalActionPerformed
@@ -298,10 +352,32 @@ public class FormDistributor extends javax.swing.JPanel {
         mainPanel.add(pnUtama);
         mainPanel.repaint();
         mainPanel.revalidate();
+        loadData();
+        resetForm();
     }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+
+    private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
+        loadData();
+        btnBatal.setVisible(false);
+        btnTambah.setText("Tambah Distributor");
+    }//GEN-LAST:event_btnBatalActionPerformed
+
+    private void tabeldistributorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabeldistributorMouseClicked
+     if(btnTambah.getText().equals("Tambah Distributor"))
+    {
+        btnTambah.setText("Ubah");
+    }   
+      
+    btnBatal.setVisible(true); 
+    }//GEN-LAST:event_tabeldistributorMouseClicked
+
+    private void txtIdDistributorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtIdDistributorMouseClicked
+     validasiInputKode();
+    }//GEN-LAST:event_txtIdDistributorMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnBatal4;
     private javax.swing.JButton btnSimpan4;
     private javax.swing.JButton btnTambah;
@@ -314,16 +390,146 @@ public class FormDistributor extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel pnHeaderTambah;
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
-    private javax.swing.JTextField txtBarcode;
-    private javax.swing.JTextField txtDistributor;
-    private javax.swing.JTextField txtIdProduk;
+    private javax.swing.JTable tabeldistributor;
+    private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtIdDistributor;
+    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtNomor;
     private javax.swing.JTextField txtPencarian;
-    private javax.swing.JTextField txtProduk;
     // End of variables declaration//GEN-END:variables
+ private void loadData() {
+        btnTambah.setText("Tambah Distributor");
+        btnBatal.setVisible(false);
+        List<ModelDistributor> list = service.getData();
+        tabel.setData(list);
+    }
+
+    private void SimpanData() {
+        if(validasiInput()==true){
+        String id_distributor       = txtIdDistributor.getText();
+        String nama_distributor    = txtNama.getText();
+        String alamat_distributor  = txtAlamat.getText();
+        String no_tlp_distributor      = txtNomor.getText();
+        
+        ModelDistributor ds = new ModelDistributor();
+        
+        ds.setId_distributor(id_distributor);
+        ds.setNama_distributor(nama_distributor);
+        ds.setAlamat_distributor(alamat_distributor);
+        ds.setNo_tlp_distributor(no_tlp_distributor);
+
+        
+        service.tambahData(ds);
+        tabel.tambahData(ds);
+        resetForm();
+        loadData();
+        
+        mainPanel.removeAll();
+        mainPanel.add(pnUtama);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        }
+    }
+
+    private boolean validasiInput() {
+        boolean valid = false;
+        if(txtNama.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Nama Barang Tidak Boleh Kosong");
+        }else if(txtAlamat.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Alamat Tidak Boleh Kosong");
+        }else if(txtNomor.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Link Tidak Boleh Kosong");
+        }else{
+                valid=true;
+            }
+            return valid;
+    }
+    
+     private boolean validasiInputKode() {
+        boolean valid = false;
+        if(!txtIdDistributor.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Telah Terisi Otomatis");
+        }else{
+                valid=true;
+            }
+            return valid;
+    }
+     
+//    private boolean validasiKlikTable() {
+//        field_kode.setEnabled(false);
+//        field_supplier.setEnabled(false);
+//        field_nama.setEnabled(false);
+//        field_alamat.setEnabled(false);
+//        field_link.setEnabled(false);
+//        field_tlp.setEnabled(false);
+//        return true;
+//    }
+     
+
+    private void resetForm() {
+        txtIdDistributor.setText("");
+        txtNama.setText("");
+        txtAlamat.setText("");
+        txtNomor.setText("");
+    }
+
+    private void dataTabel() {
+        
+        int row = tabeldistributor.getSelectedRow();
+        
+        txtIdDistributor.setEnabled(false);
+        
+        txtIdDistributor.setText        (tabeldistributor.getModel().getValueAt(row,1).toString());
+        txtNama.setText                 (tabeldistributor.getModel().getValueAt(row,2).toString());
+        txtAlamat.setText               (tabeldistributor.getModel().getValueAt(row,3).toString());
+        txtNomor.setText                (tabeldistributor.getModel().getValueAt(row,4).toString());
+
+//        aktif();
+        btnSimpan4.setText("Perbarui");
+    }
+
+//    private void aktif() {
+//        field_nama.setEnabled(true);
+//        field_alamat.setEnabled(true);
+//        field_link.setEnabled(true);
+//        field_tlp.setEnabled(true);
+//    }
+
+    private void perbaruiData() {
+        int index = tabeldistributor.getSelectedRow();
+        if (index!=-1){
+//            Model_Supplier mod_supplier = tblModel.getData(tabel_supplier.convertRowIndexToModel(index));
+            
+            if(validasiInput()==true){
+            String id_distributor       = txtIdDistributor.getText();
+            String nama_distributor    = txtNama.getText();
+            String alamat_distributor  = txtAlamat.getText();
+            String no_tlp_distributor      = txtNomor.getText();
+                
+//                Model_Data_Produk dp = new Model_Data_Produk();
+                ModelDistributor ds = new ModelDistributor();
+        
+//                dp.setIddata_produk(iddata_produk);
+                ds.setId_distributor(id_distributor);
+                ds.setNama_distributor(nama_distributor);
+                ds.setAlamat_distributor(alamat_distributor);
+                ds.setNo_tlp_distributor(no_tlp_distributor);
+        
+//                dp.setMod_idsupplier(ms);
+                
+                service.perbaruiData(ds);
+                tabel.perbaruiData(index,ds);
+                loadData();
+                resetForm();
+                
+            }
+        }
+    }
+
+
 }

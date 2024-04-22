@@ -13,7 +13,7 @@ public class Koneksi {
    public static Connection getConnection(){
        if(connection==null){
            try{
-              String url = "jdbc:mysql://localhost:3306/db_pelanggan";
+              String url = "jdbc:mysql://localhost:3306/vaper";
               String user ="root";
               String pass ="";
               DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());

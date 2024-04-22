@@ -72,10 +72,10 @@ public class TabelModelProduk extends AbstractTableModel {
         }else{
         switch (columnIndex -1){
         case 0:return list.get(rowIndex).getId_data_produk();
-        case 1:return list.get(rowIndex).getMod_id_distributor().getId_distributor();
+        case 1:return list.get(rowIndex).getMod_distributor().getId_distributor();
         case 2:return list.get(rowIndex).getNama_produk();
         case 3:return list.get(rowIndex).getBarcode();
-        case 4:return list.get(rowIndex).getMod_idkategori().getIdkategori();
+        case 4:return list.get(rowIndex).getMod_kategori().getIdkategori();
         case 5:return list.get(rowIndex).getHarga_beli();
         case 6:return list.get(rowIndex).getHarga_jual();
         case 7:return list.get(rowIndex).getJumlah_stok();

@@ -13,7 +13,6 @@ public class FormDataProduk extends javax.swing.JPanel {
 
     public FormDataProduk() {
         initComponents();
-        setLayoutForm();
         //tblData.setModel(tblModel);
         //loadData();
     }
@@ -31,6 +30,7 @@ public class FormDataProduk extends javax.swing.JPanel {
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        btnBatal = new javax.swing.JButton();
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -40,22 +40,19 @@ public class FormDataProduk extends javax.swing.JPanel {
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
         txtIdProduk = new javax.swing.JTextField();
         txtBarcode = new javax.swing.JTextField();
         txtProduk = new javax.swing.JTextField();
         txtBeli = new javax.swing.JTextField();
         txtJual = new javax.swing.JTextField();
         txtJumlahStok = new javax.swing.JTextField();
-        cbxStatus = new javax.swing.JComboBox<>();
         btnSimpan4 = new javax.swing.JButton();
         btnBatal4 = new javax.swing.JButton();
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
-        txtDistributor1 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cbxKategori = new javax.swing.JComboBox<>();
+        cbxDistributor = new javax.swing.JComboBox<>();
 
         setLayout(new java.awt.CardLayout());
 
@@ -101,6 +98,11 @@ public class FormDataProduk extends javax.swing.JPanel {
         jTable1.setRowHeight(30);
         jScrollPane2.setViewportView(jTable1);
 
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
         pnUtamaLayout.setHorizontalGroup(
@@ -113,13 +115,19 @@ public class FormDataProduk extends javax.swing.JPanel {
                     .addGroup(pnUtamaLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1122, Short.MAX_VALUE)
                             .addGroup(pnUtamaLayout.createSequentialGroup()
-                                .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(btnTambah))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnUtamaLayout.createSequentialGroup()
+                                .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(pnUtamaLayout.createSequentialGroup()
+                                        .addComponent(btnTambah)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnBatal)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1090, Short.MAX_VALUE))
+                                .addGap(20, 20, 20)))))
                 .addContainerGap())
         );
         pnUtamaLayout.setVerticalGroup(
@@ -132,7 +140,8 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
                 .addGap(30, 30, 30))
@@ -163,9 +172,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel45.setText("Jumlah Stok");
 
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel46.setText("Status");
-
         txtIdProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtBarcode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -177,9 +183,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         txtJual.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtJumlahStok.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-
-        cbxStatus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        cbxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Status", "Ada", "Habis" }));
 
         btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
         btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -225,14 +228,12 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
-
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel47.setText("Kategori");
 
-        txtDistributor1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
+        cbxDistributor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -252,14 +253,10 @@ public class FormDataProduk extends javax.swing.JPanel {
                                     .addComponent(jLabel47))
                                 .addGap(57, 57, 57)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtBarcode)
+                                    .addComponent(txtBarcode, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
                                     .addComponent(txtIdProduk, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jComboBox2, 0, 397, Short.MAX_VALUE)
-                                            .addComponent(txtDistributor1))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbxDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,16 +267,9 @@ public class FormDataProduk extends javax.swing.JPanel {
                                     .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(txtBeli, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel42)
-                                        .addComponent(jLabel46))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addGap(38, 38, 38)
-                                            .addComponent(cbxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabel42)
+                                    .addGap(38, 38, 38)
+                                    .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(210, 210, 210)
@@ -300,19 +290,14 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
                     .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDistributor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel41))))
-                .addGap(16, 16, 16)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(cbxDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel47)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -329,15 +314,11 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel45)
                     .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel46)
-                    .addComponent(cbxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(289, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnTambahLayout = new javax.swing.GroupLayout(pnTambah);
@@ -389,12 +370,12 @@ public class FormDataProduk extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnBatal4;
     private javax.swing.JButton btnSimpan4;
     private javax.swing.JButton btnTambah;
-    private javax.swing.JComboBox<String> cbxStatus;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> cbxDistributor;
+    private javax.swing.JComboBox<String> cbxKategori;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel39;
@@ -404,7 +385,6 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
@@ -417,7 +397,6 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JPanel pnUtama;
     private javax.swing.JTextField txtBarcode;
     private javax.swing.JTextField txtBeli;
-    private javax.swing.JTextField txtDistributor1;
     private javax.swing.JTextField txtIdProduk;
     private javax.swing.JTextField txtJual;
     private javax.swing.JTextField txtJumlahStok;
@@ -425,27 +404,6 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JTextField txtProduk;
     // End of variables declaration//GEN-END:variables
 
-    private void setLayoutForm() {
-        pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
-                + "background:rgb(72,63,139);"
-                + "arc:20;");
-        txtIdProduk.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtBarcode.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtBeli.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtJual.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtJumlahStok.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtPencarian.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtProduk.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        cbxStatus.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-    }
     
     private void pencarianData() {
         //List<ModelProduk> list = servis.pencarianData(txtPencarian.getText());

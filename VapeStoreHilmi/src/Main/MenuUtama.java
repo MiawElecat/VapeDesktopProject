@@ -48,8 +48,8 @@ public class MenuUtama extends javax.swing.JFrame {
         FlatLightLaf.setup();
         
         java.awt.EventQueue.invokeLater(() -> {
-            app = new MenuUtama();
-            app.setVisible(true);
+                app = new MenuUtama();
+                app.setVisible(true);
         });
     }
     
