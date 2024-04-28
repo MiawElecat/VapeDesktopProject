@@ -14,8 +14,6 @@ public class FormDataProduk extends javax.swing.JPanel {
     public FormDataProduk() {
         initComponents();
         setLayoutForm();
-        //tblData.setModel(tblModel);
-        //loadData();
     }
 
     @SuppressWarnings("unchecked")
@@ -30,7 +28,7 @@ public class FormDataProduk extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblDataProduk = new javax.swing.JTable();
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -43,19 +41,19 @@ public class FormDataProduk extends javax.swing.JPanel {
         jLabel46 = new javax.swing.JLabel();
         txtIdProduk = new javax.swing.JTextField();
         txtBarcode = new javax.swing.JTextField();
-        txtProduk = new javax.swing.JTextField();
+        txtNama = new javax.swing.JTextField();
         txtBeli = new javax.swing.JTextField();
         txtJual = new javax.swing.JTextField();
         txtJumlahStok = new javax.swing.JTextField();
         cbxStatus = new javax.swing.JComboBox<>();
-        btnSimpan4 = new javax.swing.JButton();
-        btnBatal4 = new javax.swing.JButton();
+        btnSimpan = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnPencarianDistributor = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
-        txtDistributor1 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        txtDistributor = new javax.swing.JTextField();
+        cbxKategori = new javax.swing.JComboBox<>();
 
         setLayout(new java.awt.CardLayout());
 
@@ -86,8 +84,8 @@ public class FormDataProduk extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDataProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblDataProduk.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -98,8 +96,8 @@ public class FormDataProduk extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setRowHeight(30);
-        jScrollPane2.setViewportView(jTable1);
+        tblDataProduk.setRowHeight(30);
+        jScrollPane2.setViewportView(tblDataProduk);
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -170,7 +168,7 @@ public class FormDataProduk extends javax.swing.JPanel {
 
         txtBarcode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNama.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtBeli.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
@@ -181,21 +179,21 @@ public class FormDataProduk extends javax.swing.JPanel {
         cbxStatus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cbxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Status", "Ada", "Habis" }));
 
-        btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
-        btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSimpan4.setForeground(new java.awt.Color(255, 255, 255));
-        btnSimpan4.setText("Simpan");
-        btnSimpan4.addActionListener(new java.awt.event.ActionListener() {
+        btnSimpan.setBackground(new java.awt.Color(72, 63, 139));
+        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
+        btnSimpan.setText("Simpan");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanActionPerformed(evt);
             }
         });
 
-        btnBatal4.setBackground(new java.awt.Color(72, 63, 139));
-        btnBatal4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnBatal4.setForeground(new java.awt.Color(255, 255, 255));
-        btnBatal4.setText("Batal");
-        btnBatal4.addActionListener(new java.awt.event.ActionListener() {
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBatalActionPerformed(evt);
             }
@@ -225,14 +223,14 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
+        btnPencarianDistributor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
 
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel47.setText("Kategori");
 
-        txtDistributor1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
+        cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -256,10 +254,10 @@ public class FormDataProduk extends javax.swing.JPanel {
                                     .addComponent(txtIdProduk, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jComboBox2, 0, 397, Short.MAX_VALUE)
-                                            .addComponent(txtDistributor1))
+                                            .addComponent(cbxKategori, 0, 397, Short.MAX_VALUE)
+                                            .addComponent(txtDistributor))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(btnPencarianDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,13 +277,13 @@ public class FormDataProduk extends javax.swing.JPanel {
                                             .addComponent(cbxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(210, 210, 210)
-                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(533, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -303,19 +301,19 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jButton1))
+                        .addComponent(btnPencarianDistributor))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDistributor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel41))))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel47)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel42))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -335,8 +333,8 @@ public class FormDataProduk extends javax.swing.JPanel {
                     .addComponent(cbxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(227, Short.MAX_VALUE))
         );
 
@@ -389,12 +387,12 @@ public class FormDataProduk extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBatal4;
-    private javax.swing.JButton btnSimpan4;
+    private javax.swing.JButton btnBatal;
+    private javax.swing.JButton btnPencarianDistributor;
+    private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnTambah;
+    private javax.swing.JComboBox<String> cbxKategori;
     private javax.swing.JComboBox<String> cbxStatus;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel39;
@@ -409,20 +407,20 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel pnHeaderTambah;
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
+    private javax.swing.JTable tblDataProduk;
     private javax.swing.JTextField txtBarcode;
     private javax.swing.JTextField txtBeli;
-    private javax.swing.JTextField txtDistributor1;
+    private javax.swing.JTextField txtDistributor;
     private javax.swing.JTextField txtIdProduk;
     private javax.swing.JTextField txtJual;
     private javax.swing.JTextField txtJumlahStok;
+    private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtPencarian;
-    private javax.swing.JTextField txtProduk;
     // End of variables declaration//GEN-END:variables
 
     private void setLayoutForm() {
@@ -441,7 +439,7 @@ public class FormDataProduk extends javax.swing.JPanel {
                 + "arc:20;");
         txtPencarian.putClientProperty(FlatClientProperties.STYLE, ""
                 + "arc:20;");
-        txtProduk.putClientProperty(FlatClientProperties.STYLE, ""
+        txtNama.putClientProperty(FlatClientProperties.STYLE, ""
                 + "arc:20;");
         cbxStatus.putClientProperty(FlatClientProperties.STYLE, ""
                 + "arc:20;");

@@ -11,20 +11,18 @@ import vape.model.ModelPengguna;
  */
 public interface ServicePengguna {
     
-    void prosesLogin    (ModelPengguna mod_login);
-    
-    void tambahData     (ModelPengguna mod_pengguna );
+    void tambahData     (ModelPengguna mod_pengguna);
     void perbaruiData   (ModelPengguna mod_pengguna);
     void hapusData      (ModelPengguna mod_pengguna);
     void register       (ModelPengguna mod_pengguna);
 
-    
     ModelPengguna getByid (String id);
     
-    List<ModelPengguna>getData();
-    List<ModelPengguna>search(String id);
+    List<ModelPengguna>tampilData();
+    List<ModelPengguna>pencarianData(String id);
     
-    String nomor();
+//    String generateSHA256(String password);
+    ModelPengguna prosesLogin(ModelPengguna model);
 
    
     boolean register (String username, String password, String hewan);

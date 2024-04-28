@@ -34,43 +34,43 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblPembelian = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tblDetailPembelian = new javax.swing.JTable();
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
+        lbTanggal = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        txtBarcode = new javax.swing.JTextField();
-        txtKategori = new javax.swing.JTextField();
+        txtIdDistributor = new javax.swing.JTextField();
+        txtIdProduk = new javax.swing.JTextField();
         txtProduk = new javax.swing.JTextField();
-        txtBeli = new javax.swing.JTextField();
-        txtJual = new javax.swing.JTextField();
-        txtJumlahStok = new javax.swing.JTextField();
-        btnSimpan4 = new javax.swing.JButton();
-        btnBatal4 = new javax.swing.JButton();
+        txtHarga = new javax.swing.JTextField();
+        txtJumlah = new javax.swing.JTextField();
+        txtSubtotalHarga = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        lbIdPengguna = new javax.swing.JLabel();
+        lbNamaPengguna = new javax.swing.JLabel();
+        btnCariDistributor = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
-        txtDistributor1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        txtNama = new javax.swing.JTextField();
+        btnCariProduk = new javax.swing.JButton();
         lbIdPembelian = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        btnSimpan5 = new javax.swing.JButton();
-        btnBatal5 = new javax.swing.JButton();
+        tblSementara = new javax.swing.JTable();
+        btnHapus = new javax.swing.JButton();
+        btnPerbarui = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lbInputHarga = new javax.swing.JLabel();
 
         mainPanel.setLayout(new java.awt.CardLayout());
 
@@ -99,8 +99,8 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblPembelian.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblPembelian.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -111,14 +111,14 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setRowHeight(30);
-        jScrollPane2.setViewportView(jTable1);
+        tblPembelian.setRowHeight(30);
+        jScrollPane2.setViewportView(tblPembelian);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setText("Detail Pembelian");
 
-        jTable3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tblDetailPembelian.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblDetailPembelian.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -129,8 +129,8 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable3.setRowHeight(30);
-        jScrollPane3.setViewportView(jTable3);
+        tblDetailPembelian.setRowHeight(30);
+        jScrollPane3.setViewportView(tblDetailPembelian);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -199,9 +199,9 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
 
         mainPanel.add(pnTabelProduk, "card2");
 
-        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("Tanggal");
+        lbTanggal.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbTanggal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTanggal.setText("Tanggal");
 
         jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel40.setText("ID Distributor");
@@ -221,35 +221,35 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
         jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel45.setText("Subtotal Harga");
 
-        txtBarcode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIdDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtKategori.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIdProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtBeli.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtHarga.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtJual.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtJumlah.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtJumlahStok.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtSubtotalHarga.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
-        btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSimpan4.setForeground(new java.awt.Color(255, 255, 255));
-        btnSimpan4.setText("Simpan");
-        btnSimpan4.addActionListener(new java.awt.event.ActionListener() {
+        btnSimpan.setBackground(new java.awt.Color(72, 63, 139));
+        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
+        btnSimpan.setText("Simpan");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpan4btnSimpanActionPerformed(evt);
+                btnSimpanbtnSimpanActionPerformed(evt);
             }
         });
 
-        btnBatal4.setBackground(new java.awt.Color(72, 63, 139));
-        btnBatal4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnBatal4.setForeground(new java.awt.Color(255, 255, 255));
-        btnBatal4.setText("Batal");
-        btnBatal4.addActionListener(new java.awt.event.ActionListener() {
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBatal4btnBatalActionPerformed(evt);
+                btnBatalbtnBatalActionPerformed(evt);
             }
         });
 
@@ -260,13 +260,13 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Transaksi Pembelian");
 
-        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel49.setText("ID Pengguna");
+        lbIdPengguna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbIdPengguna.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbIdPengguna.setText("ID Pengguna");
 
-        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("Nama Pengguna");
+        lbNamaPengguna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbNamaPengguna.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbNamaPengguna.setText("Nama Pengguna");
 
         javax.swing.GroupLayout pnHeaderTambahLayout = new javax.swing.GroupLayout(pnHeaderTambah);
         pnHeaderTambah.setLayout(pnHeaderTambahLayout);
@@ -277,9 +277,9 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                 .addGroup(pnHeaderTambahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 1149, Short.MAX_VALUE)
                     .addGroup(pnHeaderTambahLayout.createSequentialGroup()
-                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbIdPengguna, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbNamaPengguna, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -288,32 +288,32 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
             .addGroup(pnHeaderTambahLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnHeaderTambahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel49)
-                    .addComponent(jLabel51))
+                    .addComponent(lbIdPengguna)
+                    .addComponent(lbNamaPengguna))
                 .addGap(10, 10, 10)
                 .addComponent(jLabel11)
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCariDistributor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
+        btnCariDistributor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCariDistributorActionPerformed(evt);
             }
         });
 
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel47.setText("ID Produk");
 
-        txtDistributor1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNama.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
+        btnCariProduk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
 
         lbIdPembelian.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbIdPembelian.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbIdPembelian.setText("ID Pembelian");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tblSementara.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -324,33 +324,33 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable2);
+        jScrollPane1.setViewportView(tblSementara);
 
-        btnSimpan5.setBackground(new java.awt.Color(72, 63, 139));
-        btnSimpan5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSimpan5.setForeground(new java.awt.Color(255, 255, 255));
-        btnSimpan5.setText("Hapus");
-        btnSimpan5.addActionListener(new java.awt.event.ActionListener() {
+        btnHapus.setBackground(new java.awt.Color(72, 63, 139));
+        btnHapus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnHapus.setForeground(new java.awt.Color(255, 255, 255));
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpan5btnSimpanActionPerformed(evt);
+                btnHapusbtnSimpanActionPerformed(evt);
             }
         });
 
-        btnBatal5.setBackground(new java.awt.Color(72, 63, 139));
-        btnBatal5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnBatal5.setForeground(new java.awt.Color(255, 255, 255));
-        btnBatal5.setText("Perbarui");
-        btnBatal5.addActionListener(new java.awt.event.ActionListener() {
+        btnPerbarui.setBackground(new java.awt.Color(72, 63, 139));
+        btnPerbarui.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnPerbarui.setForeground(new java.awt.Color(255, 255, 255));
+        btnPerbarui.setText("Perbarui");
+        btnPerbarui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBatal5btnBatalActionPerformed(evt);
+                btnPerbaruibtnBatalActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setText("Total Harga : Rp.");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setText("0.0");
+        lbInputHarga.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbInputHarga.setText("0.0");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -364,9 +364,9 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(121, 121, 121)
-                                .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtIdDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnCariDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel40)
                             .addComponent(jLabel47)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -377,12 +377,12 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(txtKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(18, 18, 18)
-                                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(btnCariProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtDistributor1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(txtBeli, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtHarga, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel41)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -390,29 +390,29 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                                     .addComponent(jLabel45))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(txtJumlah, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSubtotalHarga, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(113, 113, 113)
-                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(lbIdPembelian, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lbTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnSimpan5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnBatal5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPerbarui, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2)))
+                        .addComponent(lbInputHarga)))
                 .addGap(32, 32, 32))
         );
         jPanel2Layout.setVerticalGroup(
@@ -426,56 +426,55 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnSimpan5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnBatal5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnPerbarui, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel3)
-                                .addComponent(jLabel2)))
+                                .addComponent(lbInputHarga)))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbIdPembelian)
-                            .addComponent(jLabel39))
+                            .addComponent(lbTanggal))
                         .addGap(19, 19, 19)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel40)
-                            .addComponent(jButton1)
-                            .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btnCariDistributor)
+                            .addComponent(txtIdDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(3, 3, 3)
                                 .addComponent(jLabel41))
-                            .addComponent(txtDistributor1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(27, 27, 27)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel47)
-                                    .addComponent(txtKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jButton2))
+                                    .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnCariProduk))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel42))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtBeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel43))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtJumlah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel44))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSubtotalHarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel45))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -535,43 +534,41 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
 
     }//GEN-LAST:event_txtPencarianKeyReleased
 
-    private void btnSimpan4btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan4btnSimpanActionPerformed
+    private void btnSimpanbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanbtnSimpanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSimpan4btnSimpanActionPerformed
+    }//GEN-LAST:event_btnSimpanbtnSimpanActionPerformed
 
-    private void btnBatal4btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal4btnBatalActionPerformed
+    private void btnBatalbtnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalbtnBatalActionPerformed
         mainPanel.removeAll();
         mainPanel.add(pnUtama);
         mainPanel.repaint();
         mainPanel.revalidate();
-    }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+    }//GEN-LAST:event_btnBatalbtnBatalActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnCariDistributorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariDistributorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnCariDistributorActionPerformed
 
-    private void btnSimpan5btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan5btnSimpanActionPerformed
+    private void btnHapusbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusbtnSimpanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSimpan5btnSimpanActionPerformed
+    }//GEN-LAST:event_btnHapusbtnSimpanActionPerformed
 
-    private void btnBatal5btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal5btnBatalActionPerformed
+    private void btnPerbaruibtnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerbaruibtnBatalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBatal5btnBatalActionPerformed
+    }//GEN-LAST:event_btnPerbaruibtnBatalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBatal4;
-    private javax.swing.JButton btnBatal5;
-    private javax.swing.JButton btnSimpan4;
-    private javax.swing.JButton btnSimpan5;
+    private javax.swing.JButton btnBatal;
+    private javax.swing.JButton btnCariDistributor;
+    private javax.swing.JButton btnCariProduk;
+    private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnPerbarui;
+    private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnTambah;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -579,8 +576,6 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -588,22 +583,26 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JLabel lbIdPembelian;
+    private javax.swing.JLabel lbIdPengguna;
+    private javax.swing.JLabel lbInputHarga;
+    private javax.swing.JLabel lbNamaPengguna;
+    private javax.swing.JLabel lbTanggal;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel pnHeaderTambah;
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
-    private javax.swing.JTextField txtBarcode;
-    private javax.swing.JTextField txtBeli;
-    private javax.swing.JTextField txtDistributor1;
-    private javax.swing.JTextField txtJual;
-    private javax.swing.JTextField txtJumlahStok;
-    private javax.swing.JTextField txtKategori;
+    private javax.swing.JTable tblDetailPembelian;
+    private javax.swing.JTable tblPembelian;
+    private javax.swing.JTable tblSementara;
+    private javax.swing.JTextField txtHarga;
+    private javax.swing.JTextField txtIdDistributor;
+    private javax.swing.JTextField txtIdProduk;
+    private javax.swing.JTextField txtJumlah;
+    private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtPencarian;
     private javax.swing.JTextField txtProduk;
+    private javax.swing.JTextField txtSubtotalHarga;
     // End of variables declaration//GEN-END:variables
 }

@@ -129,7 +129,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable1">
+                    <Component class="javax.swing.JTable" name="tblDataProduk">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -225,11 +225,11 @@
                                               <Component id="txtIdProduk" alignment="1" max="32767" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jComboBox2" pref="397" max="32767" attributes="0"/>
-                                                      <Component id="txtDistributor1" max="32767" attributes="0"/>
+                                                      <Component id="cbxKategori" pref="397" max="32767" attributes="0"/>
+                                                      <Component id="txtDistributor" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="25" max="32767" attributes="0"/>
-                                                  <Component id="jButton1" min="-2" pref="40" max="-2" attributes="0"/>
+                                                  <Component id="btnPencarianDistributor" min="-2" pref="40" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -256,7 +256,7 @@
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="txtProduk" min="-2" pref="462" max="-2" attributes="0"/>
+                                                      <Component id="txtNama" min="-2" pref="462" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -266,9 +266,9 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
-                                  <Component id="btnSimpan4" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnSimpan" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="btnBatal4" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnBatal" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="533" max="32767" attributes="0"/>
@@ -292,12 +292,12 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnPencarianDistributor" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtDistributor1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtDistributor" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -305,11 +305,11 @@
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbxKategori" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtProduk" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNama" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -334,8 +334,8 @@
                           </Group>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnSimpan4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="btnBatal4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnSimpan" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnBatal" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="227" max="32767" attributes="0"/>
                       </Group>
@@ -421,7 +421,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtProduk">
+                <Component class="javax.swing.JTextField" name="txtNama">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
@@ -466,7 +466,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnSimpan4">
+                <Component class="javax.swing.JButton" name="btnSimpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8b" green="3f" red="48" type="rgb"/>
@@ -483,7 +483,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBatal4">
+                <Component class="javax.swing.JButton" name="btnBatal">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8b" green="3f" red="48" type="rgb"/>
@@ -542,7 +542,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="btnPencarianDistributor">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icon/search-alt-2-regular-24.png"/>
@@ -557,14 +557,14 @@
                     <Property name="text" type="java.lang.String" value="Kategori"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtDistributor1">
+                <Component class="javax.swing.JTextField" name="txtDistributor">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox2">
+                <Component class="javax.swing.JComboBox" name="cbxKategori">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="3">

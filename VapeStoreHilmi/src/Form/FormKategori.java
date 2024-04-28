@@ -34,17 +34,17 @@ public class FormKategori extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblKategori = new javax.swing.JTable();
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        txtIdProduk = new javax.swing.JTextField();
-        txtBarcode = new javax.swing.JTextField();
-        txtDistributor = new javax.swing.JTextField();
-        btnSimpan4 = new javax.swing.JButton();
-        btnBatal4 = new javax.swing.JButton();
+        txtIdKategori = new javax.swing.JTextField();
+        txtNama = new javax.swing.JTextField();
+        txtDeskripsi = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -77,8 +77,8 @@ public class FormKategori extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblKategori.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblKategori.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -89,8 +89,8 @@ public class FormKategori extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setRowHeight(30);
-        jScrollPane2.setViewportView(jTable1);
+        tblKategori.setRowHeight(30);
+        jScrollPane2.setViewportView(tblKategori);
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -142,29 +142,29 @@ public class FormKategori extends javax.swing.JPanel {
         jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel41.setText("Deskripsi");
 
-        txtIdProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtIdKategori.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtBarcode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtNama.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        txtDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtDeskripsi.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
-        btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSimpan4.setForeground(new java.awt.Color(255, 255, 255));
-        btnSimpan4.setText("Simpan");
-        btnSimpan4.addActionListener(new java.awt.event.ActionListener() {
+        btnSimpan.setBackground(new java.awt.Color(72, 63, 139));
+        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
+        btnSimpan.setText("Simpan");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpan4btnSimpanActionPerformed(evt);
+                btnSimpanbtnSimpanActionPerformed(evt);
             }
         });
 
-        btnBatal4.setBackground(new java.awt.Color(72, 63, 139));
-        btnBatal4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnBatal4.setForeground(new java.awt.Color(255, 255, 255));
-        btnBatal4.setText("Batal");
-        btnBatal4.addActionListener(new java.awt.event.ActionListener() {
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBatal4btnBatalActionPerformed(evt);
+                btnBatalbtnBatalActionPerformed(evt);
             }
         });
 
@@ -207,14 +207,14 @@ public class FormKategori extends javax.swing.JPanel {
                             .addComponent(jLabel41))
                         .addGap(57, 57, 57)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtBarcode, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
-                            .addComponent(txtIdProduk, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtDistributor)))
+                            .addComponent(txtNama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
+                            .addComponent(txtIdKategori, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtDeskripsi)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(228, 228, 228)
-                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(511, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -224,19 +224,19 @@ public class FormKategori extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
-                    .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel41))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(509, Short.MAX_VALUE))
         );
 
@@ -276,21 +276,21 @@ public class FormKategori extends javax.swing.JPanel {
        
     }//GEN-LAST:event_txtPencarianKeyReleased
 
-    private void btnSimpan4btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan4btnSimpanActionPerformed
+    private void btnSimpanbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanbtnSimpanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSimpan4btnSimpanActionPerformed
+    }//GEN-LAST:event_btnSimpanbtnSimpanActionPerformed
 
-    private void btnBatal4btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal4btnBatalActionPerformed
+    private void btnBatalbtnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalbtnBatalActionPerformed
         mainPanel.removeAll();
         mainPanel.add(pnUtama);
         mainPanel.repaint();
         mainPanel.revalidate();
-    }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+    }//GEN-LAST:event_btnBatalbtnBatalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBatal4;
-    private javax.swing.JButton btnSimpan4;
+    private javax.swing.JButton btnBatal;
+    private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnTambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -300,15 +300,15 @@ public class FormKategori extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel pnHeaderTambah;
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
-    private javax.swing.JTextField txtBarcode;
-    private javax.swing.JTextField txtDistributor;
-    private javax.swing.JTextField txtIdProduk;
+    private javax.swing.JTable tblKategori;
+    private javax.swing.JTextField txtDeskripsi;
+    private javax.swing.JTextField txtIdKategori;
+    private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtPencarian;
     // End of variables declaration//GEN-END:variables
 }

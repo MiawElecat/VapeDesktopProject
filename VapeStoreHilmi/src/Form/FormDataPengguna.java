@@ -33,7 +33,7 @@ public class FormDataPengguna extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblDataPengguna = new javax.swing.JTable();
 
         mainPanel.setLayout(new java.awt.CardLayout());
 
@@ -52,8 +52,8 @@ public class FormDataPengguna extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDataPengguna.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblDataPengguna.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -64,8 +64,8 @@ public class FormDataPengguna extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setRowHeight(30);
-        jScrollPane2.setViewportView(jTable1);
+        tblDataPengguna.setRowHeight(30);
+        jScrollPane2.setViewportView(tblDataPengguna);
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -139,10 +139,10 @@ public class FormDataPengguna extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnUtama;
+    private javax.swing.JTable tblDataPengguna;
     private javax.swing.JTextField txtPencarian;
     // End of variables declaration//GEN-END:variables
 }
