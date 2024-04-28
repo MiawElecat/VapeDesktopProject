@@ -49,8 +49,12 @@ public class FormDistributor extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
+        tblDistributor = new javax.swing.JTable();
+=======
         tabeldistributor = new javax.swing.JTable();
         btnBatal = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -60,9 +64,15 @@ public class FormDistributor extends javax.swing.JPanel {
         txtIdDistributor = new javax.swing.JTextField();
         txtNama = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
+<<<<<<< HEAD
+        txtTelepon = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
+=======
         txtNomor = new javax.swing.JTextField();
         btnSimpan4 = new javax.swing.JButton();
         btnBatal4 = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -90,8 +100,13 @@ public class FormDistributor extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
+        tblDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblDistributor.setModel(new javax.swing.table.DefaultTableModel(
+=======
         tabeldistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tabeldistributor.setModel(new javax.swing.table.DefaultTableModel(
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -102,6 +117,10 @@ public class FormDistributor extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+<<<<<<< HEAD
+        tblDistributor.setRowHeight(30);
+        jScrollPane2.setViewportView(tblDistributor);
+=======
         tabeldistributor.setRowHeight(30);
         tabeldistributor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -119,6 +138,7 @@ public class FormDistributor extends javax.swing.JPanel {
                 btnBatalActionPerformed(evt);
             }
         });
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -179,35 +199,42 @@ public class FormDistributor extends javax.swing.JPanel {
         jLabel42.setText("No. Telepon");
 
         txtIdDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+<<<<<<< HEAD
+=======
         txtIdDistributor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtIdDistributorMouseClicked(evt);
             }
         });
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
         txtNama.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtAlamat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
+<<<<<<< HEAD
+        txtTelepon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
         txtNomor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
-        btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
-        btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSimpan4.setForeground(new java.awt.Color(255, 255, 255));
-        btnSimpan4.setText("Simpan");
-        btnSimpan4.addActionListener(new java.awt.event.ActionListener() {
+        btnSimpan.setBackground(new java.awt.Color(72, 63, 139));
+        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
+        btnSimpan.setText("Simpan");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpan4btnSimpanActionPerformed(evt);
+                btnSimpanbtnSimpanActionPerformed(evt);
             }
         });
 
-        btnBatal4.setBackground(new java.awt.Color(72, 63, 139));
-        btnBatal4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnBatal4.setForeground(new java.awt.Color(255, 255, 255));
-        btnBatal4.setText("Batal");
-        btnBatal4.addActionListener(new java.awt.event.ActionListener() {
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBatal4btnBatalActionPerformed(evt);
+                btnBatalbtnBatalActionPerformed(evt);
             }
         });
 
@@ -253,12 +280,16 @@ public class FormDistributor extends javax.swing.JPanel {
                             .addComponent(txtIdDistributor, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
                             .addComponent(txtNama)
                             .addComponent(txtAlamat)
+<<<<<<< HEAD
+                            .addComponent(txtTelepon)))
+=======
                             .addComponent(txtNomor)))
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(218, 218, 218)
-                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(539, 539, 539))
             .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -280,12 +311,16 @@ public class FormDistributor extends javax.swing.JPanel {
                     .addComponent(jLabel41))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
+                    .addComponent(txtTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
                     .addComponent(txtNomor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                     .addComponent(jLabel42))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(482, Short.MAX_VALUE))
         );
 
@@ -335,6 +370,11 @@ public class FormDistributor extends javax.swing.JPanel {
         tabel.setData(search);
     }//GEN-LAST:event_txtPencarianKeyReleased
 
+<<<<<<< HEAD
+    private void btnSimpanbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanbtnSimpanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimpanbtnSimpanActionPerformed
+=======
     private void btnSimpan4btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan4btnSimpanActionPerformed
         if(btnSimpan4.getText().equals("Perbarui")){
             perbaruiData();
@@ -346,15 +386,20 @@ public class FormDistributor extends javax.swing.JPanel {
             SimpanData();
         }
     }//GEN-LAST:event_btnSimpan4btnSimpanActionPerformed
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
-    private void btnBatal4btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal4btnBatalActionPerformed
+    private void btnBatalbtnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalbtnBatalActionPerformed
         mainPanel.removeAll();
         mainPanel.add(pnUtama);
         mainPanel.repaint();
         mainPanel.revalidate();
+<<<<<<< HEAD
+    }//GEN-LAST:event_btnBatalbtnBatalActionPerformed
+=======
         loadData();
         resetForm();
     }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
     private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
         loadData();
@@ -378,8 +423,12 @@ public class FormDistributor extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
+<<<<<<< HEAD
+    private javax.swing.JButton btnSimpan;
+=======
     private javax.swing.JButton btnBatal4;
     private javax.swing.JButton btnSimpan4;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     private javax.swing.JButton btnTambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -395,12 +444,21 @@ public class FormDistributor extends javax.swing.JPanel {
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
+<<<<<<< HEAD
+    private javax.swing.JTable tblDistributor;
+    private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtIdDistributor;
+    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtPencarian;
+    private javax.swing.JTextField txtTelepon;
+=======
     private javax.swing.JTable tabeldistributor;
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtIdDistributor;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtNomor;
     private javax.swing.JTextField txtPencarian;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     // End of variables declaration//GEN-END:variables
  private void loadData() {
         btnTambah.setText("Tambah Distributor");

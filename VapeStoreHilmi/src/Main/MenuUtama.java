@@ -7,21 +7,24 @@ import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import vape.model.ModelPengguna;
 
 public class MenuUtama extends javax.swing.JFrame {
+    
+    private ModelPengguna mod_pegguna;
 
     private final Login FormLogin;
     private static MenuUtama app;
     private final Main mainForm;
     
-    public MenuUtama() {
+    public MenuUtama(String Id, String Nama) {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         FormLogin = new Login();
         mainForm = new Main();
         setContentPane (FormLogin);
-        //panelDalamPanel();
     }   
+
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -48,8 +51,13 @@ public class MenuUtama extends javax.swing.JFrame {
         FlatLightLaf.setup();
         
         java.awt.EventQueue.invokeLater(() -> {
+<<<<<<< HEAD
+            app = new MenuUtama("Id","Nama");
+            app.setVisible(true);
+=======
                 app = new MenuUtama();
                 app.setVisible(true);
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
         });
     }
     
@@ -59,7 +67,7 @@ public class MenuUtama extends javax.swing.JFrame {
     }
     
     
-    public static void login() {
+    public static void login(ModelPengguna model) {
         FlatAnimatedLafChange.showSnapshot();
         app.setContentPane(app.mainForm);
         app.mainForm.applyComponentOrientation(app.getComponentOrientation());
@@ -81,9 +89,9 @@ public class MenuUtama extends javax.swing.JFrame {
         app.mainForm.setSelectedMenu(index,subMenu);
     }
 
-//    private void panelDalamPanel() {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
+    private void panelDalamPanel() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables

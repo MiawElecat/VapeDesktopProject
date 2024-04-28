@@ -133,7 +133,11 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
+<<<<<<< HEAD
+                    <Component class="javax.swing.JTable" name="tblDistributor">
+=======
                     <Component class="javax.swing.JTable" name="tabeldistributor">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -221,14 +225,18 @@
                                       <Component id="txtIdDistributor" pref="482" max="32767" attributes="0"/>
                                       <Component id="txtNama" alignment="1" max="32767" attributes="0"/>
                                       <Component id="txtAlamat" alignment="1" max="32767" attributes="0"/>
+<<<<<<< HEAD
+                                      <Component id="txtTelepon" alignment="1" max="32767" attributes="0"/>
+=======
                                       <Component id="txtNomor" alignment="1" max="32767" attributes="0"/>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
-                                  <Component id="btnSimpan4" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnSimpan" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="btnBatal4" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnBatal" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="539" max="-2" attributes="0"/>
@@ -257,13 +265,17 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+<<<<<<< HEAD
+                              <Component id="txtTelepon" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
                               <Component id="txtNomor" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                               <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnSimpan4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="btnBatal4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnSimpan" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnBatal" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="482" max="32767" attributes="0"/>
                       </Group>
@@ -304,6 +316,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtIdDistributor">
+<<<<<<< HEAD
+=======
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
@@ -314,12 +328,25 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNama">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
                     </Property>
                   </Properties>
                 </Component>
+<<<<<<< HEAD
+                <Component class="javax.swing.JTextField" name="txtNama">
+=======
+                <Component class="javax.swing.JTextField" name="txtAlamat">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                  </Properties>
+                </Component>
+<<<<<<< HEAD
                 <Component class="javax.swing.JTextField" name="txtAlamat">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -327,14 +354,17 @@
                     </Property>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JTextField" name="txtTelepon">
+=======
                 <Component class="javax.swing.JTextField" name="txtNomor">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnSimpan4">
+                <Component class="javax.swing.JButton" name="btnSimpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8b" green="3f" red="48" type="rgb"/>
@@ -348,10 +378,10 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpan4btnSimpanActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpanbtnSimpanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBatal4">
+                <Component class="javax.swing.JButton" name="btnBatal">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8b" green="3f" red="48" type="rgb"/>
@@ -365,7 +395,7 @@
                     <Property name="text" type="java.lang.String" value="Batal"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBatal4btnBatalActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBatalbtnBatalActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="pnHeaderTambah">

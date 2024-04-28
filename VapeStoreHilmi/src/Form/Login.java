@@ -3,21 +3,69 @@ package Form;
 import Main.MenuUtama;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.util.UIScale;
+import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.awt.LayoutManager;
+import java.awt.RenderingHints;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import vape.DAO.PenggunaDAO;
 import vape.menu.LightDarkMode;
+import vape.model.ModelPengguna;
+import vape.service.ServicePengguna;
 
 public class Login extends javax.swing.JPanel {
+    
+    private LightDarkMode lightDarkMode;
+    private ServicePengguna servis = new PenggunaDAO();
 
     public Login() {
         initComponents();
         setLayoutForm();
     }
-
+    
+    private void resetForm() {
+        txtUser.setText("");
+        txtPass.setText("");
+    }
+    
+    private boolean validasiInput() {
+        boolean valid = false;
+        if(txtUser.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Username tidak boleh kosong");
+        } else if (txtPass.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Password tidak boleh kosong");
+        } else {
+            valid = true;
+        }
+        return valid;
+    }
+    
+    private void prosesLogin() {
+        if (validasiInput() == true) {
+            String user = txtUser.getText();
+            String pass = txtPass.getText();
+            ModelPengguna model = new ModelPengguna();
+            model.setNama_pengguna(user);
+            model.setPassword(pass);
+            
+            ModelPengguna modelPengguna = servis.prosesLogin(model);
+            if(modelPengguna != null) {
+                MenuUtama.login(modelPengguna);
+                resetForm();
+            } else {
+                JOptionPane.showMessageDialog(null, 
+                        "Username dan Password salah", "Pesan",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -36,20 +84,20 @@ public class Login extends javax.swing.JPanel {
         lbLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logo.png"))); // NOI18N
 
-        lbTitle.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 14)); // NOI18N
+        lbTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbTitle.setForeground(new java.awt.Color(255, 255, 255));
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTitle.setText("VapeR Store");
 
-        lbUser.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 14)); // NOI18N
+        lbUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbUser.setForeground(new java.awt.Color(255, 255, 255));
         lbUser.setText("Username");
 
-        lbPass.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 14)); // NOI18N
+        lbPass.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbPass.setForeground(new java.awt.Color(255, 255, 255));
         lbPass.setText("Password");
 
-        btnLogin.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 14)); // NOI18N
+        btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(51, 51, 51));
         btnLogin.setText("Masuk");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -58,10 +106,15 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
-        btnRegister.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 14)); // NOI18N
+        btnRegister.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(255, 255, 255));
         btnRegister.setText("Buat Akun");
         btnRegister.setBorderPainted(false);
+        btnRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRegisterMouseClicked(evt);
+            }
+        });
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterActionPerformed(evt);
@@ -88,13 +141,11 @@ public class Login extends javax.swing.JPanel {
                             .addComponent(lbLogo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pnLoginLayout.createSequentialGroup()
                         .addGap(77, 77, 77)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRegister)
+                            .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 57, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(pnLoginLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(btnRegister)
-                .addContainerGap(72, Short.MAX_VALUE))
         );
         pnLoginLayout.setVerticalGroup(
             pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,9 +164,9 @@ public class Login extends javax.swing.JPanel {
                 .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegister)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -125,24 +176,28 @@ public class Login extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(188, 188, 188)
                 .addComponent(pnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(pnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        MenuUtama.login();
+        prosesLogin();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
+        buatAkun();
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void btnRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegisterMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegisterMouseClicked
 
     
 
@@ -183,6 +238,11 @@ public class Login extends javax.swing.JPanel {
         txtPass.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Password");
         
 
+    }
+
+    private void buatAkun() {
+        FormBuatAkun formRegister = new FormBuatAkun(null, true);
+        formRegister.setVisible(true);
     }
 
     

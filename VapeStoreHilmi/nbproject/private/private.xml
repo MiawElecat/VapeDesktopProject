@@ -1,10 +1,35 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/ProjectVapeStore/UpdateProject/VapeStoreHilmi/src/vape/menu/Menu.java</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/ProjectVapeStore/UpdateProject/VapeStoreHilmi/src/vape/config/Koneksi.java</file>
+=======
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/Theme/FlatLightLaf.properties</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/Main/MenuUtama.java</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/vape/model/ModelPengguna.java</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/Form/FormBuatAkun.java</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/Form/FormDataProduk.java</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/vape/DAO/PenggunaDAO.java</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/Form/Login.java</file>
+            <file>file:/C:/File%20Utama/Perkuliahan/ProjectNetBeans/VapeStoreHilmi/src/vape/service/ServicePengguna.java</file>
+>>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
         </group>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Netbeans/ProjectVape/UpdateProject/VapeStoreHilmi/src/Form/FormPembelian.java</file>
+            <file>file:/D:/Netbeans/ProjectVape/UpdateProject/VapeStoreHilmi/src/vape/DAO/DAO_Laporan.java</file>
+            <file>file:/D:/Netbeans/ProjectVape/UpdateProject/VapeStoreHilmi/src/Form/FormPenjualan.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e

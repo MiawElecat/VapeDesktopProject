@@ -139,7 +139,11 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
+<<<<<<< HEAD
+                    <Component class="javax.swing.JTable" name="tblKategori">
+=======
                     <Component class="javax.swing.JTable" name="tabelKategori">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -231,10 +235,15 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
+                                  <EmptySpace min="-2" pref="228" max="-2" attributes="0"/>
+                                  <Component id="btnSimpan" min="-2" pref="90" max="-2" attributes="0"/>
+=======
                                   <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
                                   <Component id="btnSimpan4" min="-2" pref="90" max="-2" attributes="0"/>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="btnBatal4" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnBatal" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="511" max="32767" attributes="0"/>
@@ -255,6 +264,12 @@
                               <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNama" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+<<<<<<< HEAD
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtDeskripsi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
@@ -266,10 +281,11 @@
                                   <Component id="txtDeskripsi" min="-2" pref="102" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnSimpan4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="btnBatal4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnSimpan" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnBatal" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="538" max="-2" attributes="0"/>
                       </Group>
@@ -322,7 +338,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnSimpan4">
+                <Component class="javax.swing.JButton" name="btnSimpan">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8b" green="3f" red="48" type="rgb"/>
@@ -336,10 +352,10 @@
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpan4btnSimpanActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimpanbtnSimpanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBatal4">
+                <Component class="javax.swing.JButton" name="btnBatal">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8b" green="3f" red="48" type="rgb"/>
@@ -353,7 +369,7 @@
                     <Property name="text" type="java.lang.String" value="Batal"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBatal4btnBatalActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBatalbtnBatalActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="pnHeaderTambah">

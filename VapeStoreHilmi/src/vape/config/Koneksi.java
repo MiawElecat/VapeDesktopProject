@@ -15,7 +15,7 @@ public class Koneksi {
            try{
               String url = "jdbc:mysql://localhost:3306/vaper";
               String user ="root";
-              String pass ="";
+              String pass ="11223344";
               DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
               connection = (Connection) DriverManager.getConnection(url,user,pass);
            } catch (SQLException ex){
