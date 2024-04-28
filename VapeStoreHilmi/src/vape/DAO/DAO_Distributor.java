@@ -218,7 +218,7 @@ public class DAO_Distributor implements ServiceDistributor {
                 nomor++;
                 urutan = "D"+no+String.format("%03d", nomor);
             }else{
-                urutan = "D"+no+"001";
+                urutan = "D"+no+"01";
             }
         }catch(SQLException ex) {
             java.util.logging.Logger.getLogger(DAO_Distributor.class.getName()).log(Level.SEVERE,null,ex);
@@ -232,6 +232,49 @@ public class DAO_Distributor implements ServiceDistributor {
             }
         }
         return urutan;
+    }
+
+    @Override
+    public List<ModelDistributor> getDistributor() {
+        PreparedStatement st = null;
+        List list = new ArrayList();
+        ResultSet rs = null;
+        String sql = "SELECT id_distributor,nama_distributor FROM distributor";
+        try{
+            st = connection.prepareStatement(sql);
+            rs = st.executeQuery();
+            while(rs.next()){
+                ModelDistributor mod_distributor = new ModelDistributor();
+                
+                mod_distributor.setId_distributor(rs.getString("id_distributor"));
+                mod_distributor.setNama_distributor(rs.getString("nama_distributor"));
+                
+                list.add(mod_distributor);
+            }
+            return list;
+        }catch (SQLException e) {
+            e.printStackTrace();
+    }
+        return list;
+    }
+
+    @Override
+    public String getDistributorID(String id) {
+        String namaDistributor = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        String sql = "SELECT nama_distributor FROM distributor WHERE id_distributor=?";
+        try{
+            st = connection.prepareStatement(sql);
+            st.setString(1, id);
+            rs = st.executeQuery();
+            if (rs.next()){
+                namaDistributor = rs.getString("nama_distributor");
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return namaDistributor;
     }
     
 }

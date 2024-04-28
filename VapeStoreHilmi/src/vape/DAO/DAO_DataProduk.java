@@ -131,7 +131,7 @@ PreparedStatement st = null;
         List list = new ArrayList();
         ResultSet rs = null;
         String sql = "SELECT pd.id_data_produk, pd.id_distributor, pd.idkategori, pd.barcode, pd.nama_produk, pd.jumlah_stok, pd.harga_beli, pd.harga_jual, pd.status FROM data_produk pd "
-                + "INNER JOIN distributor ds ON ds.id_distributor=pd.id_dsitributor "
+                + "INNER JOIN distributor ds ON ds.id_distributor=pd.id_distributor "
                 + "INNER JOIN kategori ktg ON ktg.idkategori=pd.idkategori";
         try{
             st = connection.prepareStatement(sql);
@@ -240,7 +240,7 @@ PreparedStatement st = null;
     }
 
     @Override
-    public String nomor() {
+    public String nomor(String id) {
         PreparedStatement st = null;
         ResultSet rs = null;
         String urutan = null;
@@ -249,11 +249,7 @@ PreparedStatement st = null;
         SimpleDateFormat noformat = new SimpleDateFormat("MMyy");
         String no = noformat.format(now);
         
-        String sql = "SELECT RIGHT(id_data_produk, 3) AS Nomor " +
-                     "FROM data_produk "+
-                     "WHERE id_data_produk LIKE 'P" + no + "%' "+
-                     "ORDER BY id_data_produk DESC"+
-                     " LIMIT 1";
+        String sql = "SELECT RIGHT(id_data_produk, 3) AS Nomor FROM data_produk WHERE id_data_produk LIKE '"+id+"-" + no + "%' ORDER BY id_data_produk DESC";
         try{
             st = connection.prepareStatement(sql);
             rs = st.executeQuery();
@@ -261,9 +257,9 @@ PreparedStatement st = null;
             if(rs.next()){
                 int nomor = Integer.parseInt(rs.getString("Nomor"));
                 nomor++;
-                urutan = "P"+no+String.format("%03d", nomor);
+                urutan = id + "-" +no+ "-" +String.format("%03d", nomor);
             }else{
-                urutan = "P"+no+"001";
+                urutan = id+"-"+no+"-001";
             }
         }catch(SQLException ex) {
             java.util.logging.Logger.getLogger(DAO_DataProduk.class.getName()).log(Level.SEVERE,null,ex);

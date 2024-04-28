@@ -167,5 +167,48 @@ public class DAO_Kategori implements ServiceKategori{
         }  
     }
     }
-    
+
+    @Override
+    public List<ModelKategori> getKategori() {
+        PreparedStatement st = null;
+        List list = new ArrayList();
+        ResultSet rs = null;
+        String sql = "SELECT idkategori,nama_kategori FROM kategori";
+        try{
+            st = connection.prepareStatement(sql);
+            rs = st.executeQuery();
+            while(rs.next()){
+                ModelKategori mod_kategori = new ModelKategori();
+                
+                mod_kategori.setIdkategori(rs.getString("idkategori"));
+                mod_kategori.setNama_kategori(rs.getString("nama_kategori"));
+                
+                list.add(mod_kategori);
+            }
+            return list;
+        }catch (SQLException e) {
+            e.printStackTrace();
+    }
+        return list;
+    }
+
+    @Override
+    public String getKategoriID(String id) {
+        String namaKategori = null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        String sql = "SELECT nama_kategori FROM kategori WHERE idkategori=?";
+        try{
+            st = connection.prepareStatement(sql);
+            st.setString(1, id);
+            rs = st.executeQuery();
+            if (rs.next()){
+                namaKategori = rs.getString("nama_kategori");
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return namaKategori;
+    }
 }
+    

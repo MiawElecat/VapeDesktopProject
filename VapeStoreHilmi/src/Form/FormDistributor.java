@@ -404,6 +404,7 @@ public class FormDistributor extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
  private void loadData() {
         btnTambah.setText("Tambah Distributor");
+        btnSimpan4.setText("Simpan");
         btnBatal.setVisible(false);
         List<ModelDistributor> list = service.getData();
         tabel.setData(list);
@@ -526,6 +527,7 @@ public class FormDistributor extends javax.swing.JPanel {
                 tabel.perbaruiData(index,ds);
                 loadData();
                 resetForm();
+                btnSimpan4.setText("Simpan");
                 
             }
         }

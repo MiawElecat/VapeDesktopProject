@@ -20,4 +20,7 @@ public interface ServiceKategori {
     List<ModelKategori>getData();
     List<ModelKategori>search(String id);
     
+    List<ModelKategori> getKategori();
+    String getKategoriID(String id);
+    
 }

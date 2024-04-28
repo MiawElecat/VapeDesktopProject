@@ -15,6 +15,6 @@ public interface ServiceProduk {
     List<ModelProduk>search(String id);
     List<ModelProduk>search2(String id);
     
-    String nomor();
+    String nomor(String id);
     String nomor2();
 }
