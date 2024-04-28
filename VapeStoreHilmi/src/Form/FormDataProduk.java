@@ -13,7 +13,12 @@ public class FormDataProduk extends javax.swing.JPanel {
 
     public FormDataProduk() {
         initComponents();
+<<<<<<< HEAD
         setLayoutForm();
+=======
+        //tblData.setModel(tblModel);
+        //loadData();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     }
 
     @SuppressWarnings("unchecked")
@@ -28,7 +33,12 @@ public class FormDataProduk extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
         tblDataProduk = new javax.swing.JTable();
+=======
+        jTable1 = new javax.swing.JTable();
+        btnBatal = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -38,13 +48,13 @@ public class FormDataProduk extends javax.swing.JPanel {
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
         txtIdProduk = new javax.swing.JTextField();
         txtBarcode = new javax.swing.JTextField();
         txtNama = new javax.swing.JTextField();
         txtBeli = new javax.swing.JTextField();
         txtJual = new javax.swing.JTextField();
         txtJumlahStok = new javax.swing.JTextField();
+<<<<<<< HEAD
         cbxStatus = new javax.swing.JComboBox<>();
         btnSimpan = new javax.swing.JButton();
         btnBatal = new javax.swing.JButton();
@@ -54,6 +64,15 @@ public class FormDataProduk extends javax.swing.JPanel {
         jLabel47 = new javax.swing.JLabel();
         txtDistributor = new javax.swing.JTextField();
         cbxKategori = new javax.swing.JComboBox<>();
+=======
+        btnSimpan4 = new javax.swing.JButton();
+        btnBatal4 = new javax.swing.JButton();
+        pnHeaderTambah = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        cbxKategori = new javax.swing.JComboBox<>();
+        cbxDistributor = new javax.swing.JComboBox<>();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
         setLayout(new java.awt.CardLayout());
 
@@ -99,6 +118,11 @@ public class FormDataProduk extends javax.swing.JPanel {
         tblDataProduk.setRowHeight(30);
         jScrollPane2.setViewportView(tblDataProduk);
 
+        btnBatal.setBackground(new java.awt.Color(72, 63, 139));
+        btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Batal");
+
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
         pnUtamaLayout.setHorizontalGroup(
@@ -111,13 +135,19 @@ public class FormDataProduk extends javax.swing.JPanel {
                     .addGroup(pnUtamaLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1122, Short.MAX_VALUE)
                             .addGroup(pnUtamaLayout.createSequentialGroup()
-                                .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(btnTambah))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnUtamaLayout.createSequentialGroup()
+                                .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(pnUtamaLayout.createSequentialGroup()
+                                        .addComponent(btnTambah)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnBatal)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1090, Short.MAX_VALUE))
+                                .addGap(20, 20, 20)))))
                 .addContainerGap())
         );
         pnUtamaLayout.setVerticalGroup(
@@ -130,7 +160,8 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
                 .addGap(30, 30, 30))
@@ -161,9 +192,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel45.setText("Jumlah Stok");
 
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel46.setText("Status");
-
         txtIdProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtBarcode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -176,6 +204,7 @@ public class FormDataProduk extends javax.swing.JPanel {
 
         txtJumlahStok.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
+<<<<<<< HEAD
         cbxStatus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cbxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Status", "Ada", "Habis" }));
 
@@ -184,6 +213,13 @@ public class FormDataProduk extends javax.swing.JPanel {
         btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan.setText("Simpan");
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
+=======
+        btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
+        btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSimpan4.setForeground(new java.awt.Color(255, 255, 255));
+        btnSimpan4.setText("Simpan");
+        btnSimpan4.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanActionPerformed(evt);
             }
@@ -223,6 +259,7 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
+<<<<<<< HEAD
         btnPencarianDistributor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
 
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -231,6 +268,14 @@ public class FormDataProduk extends javax.swing.JPanel {
         txtDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
+=======
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel47.setText("Kategori");
+
+        cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
+
+        cbxDistributor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -250,14 +295,19 @@ public class FormDataProduk extends javax.swing.JPanel {
                                     .addComponent(jLabel47))
                                 .addGap(57, 57, 57)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtBarcode)
+                                    .addComponent(txtBarcode, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
                                     .addComponent(txtIdProduk, javax.swing.GroupLayout.Alignment.TRAILING)
+<<<<<<< HEAD
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(cbxKategori, 0, 397, Short.MAX_VALUE)
                                             .addComponent(txtDistributor))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                                         .addComponent(btnPencarianDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+=======
+                                    .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbxDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,6 +318,7 @@ public class FormDataProduk extends javax.swing.JPanel {
                                     .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(txtBeli, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel42)
                                         .addComponent(jLabel46))
@@ -278,6 +329,11 @@ public class FormDataProduk extends javax.swing.JPanel {
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
+=======
+                                    .addComponent(jLabel42)
+                                    .addGap(38, 38, 38)
+                                    .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                                 .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(210, 210, 210)
@@ -298,6 +354,7 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
                     .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
@@ -308,6 +365,13 @@ public class FormDataProduk extends javax.swing.JPanel {
                             .addComponent(txtDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel41))))
                 .addGap(16, 16, 16)
+=======
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(cbxDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel47)
                     .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -327,15 +391,17 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel45)
                     .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel46)
-                    .addComponent(cbxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
                     .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(227, Short.MAX_VALUE))
+=======
+                    .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(289, Short.MAX_VALUE))
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
         );
 
         javax.swing.GroupLayout pnTambahLayout = new javax.swing.GroupLayout(pnTambah);
@@ -388,11 +454,19 @@ public class FormDataProduk extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
+<<<<<<< HEAD
     private javax.swing.JButton btnPencarianDistributor;
     private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnTambah;
     private javax.swing.JComboBox<String> cbxKategori;
     private javax.swing.JComboBox<String> cbxStatus;
+=======
+    private javax.swing.JButton btnBatal4;
+    private javax.swing.JButton btnSimpan4;
+    private javax.swing.JButton btnTambah;
+    private javax.swing.JComboBox<String> cbxDistributor;
+    private javax.swing.JComboBox<String> cbxKategori;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel39;
@@ -402,7 +476,6 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
@@ -415,7 +488,10 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JTable tblDataProduk;
     private javax.swing.JTextField txtBarcode;
     private javax.swing.JTextField txtBeli;
+<<<<<<< HEAD
     private javax.swing.JTextField txtDistributor;
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     private javax.swing.JTextField txtIdProduk;
     private javax.swing.JTextField txtJual;
     private javax.swing.JTextField txtJumlahStok;
@@ -423,6 +499,7 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JTextField txtPencarian;
     // End of variables declaration//GEN-END:variables
 
+<<<<<<< HEAD
     private void setLayoutForm() {
         pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
                 + "background:rgb(72,63,139);"
@@ -444,6 +521,8 @@ public class FormDataProduk extends javax.swing.JPanel {
         cbxStatus.putClientProperty(FlatClientProperties.STYLE, ""
                 + "arc:20;");
     }
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     
     private void pencarianData() {
         //List<ModelProduk> list = servis.pencarianData(txtPencarian.getText());

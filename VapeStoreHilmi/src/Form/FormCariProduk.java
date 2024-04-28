@@ -27,38 +27,37 @@ public class FormCariProduk extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel12 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         pnHeaderTambah1 = new javax.swing.JPanel();
+<<<<<<< HEAD
         jLabel12 = new javax.swing.JLabel();
         txtPencarian = new javax.swing.JTextField();
+=======
+        jTextField1 = new javax.swing.JTextField();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPencarian = new javax.swing.JTable();
         btnPencarian = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        pnHeaderTambah1.setBackground(new java.awt.Color(72, 63, 139));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Pencarian Produk");
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        pnHeaderTambah1.setBackground(new java.awt.Color(72, 63, 139));
+
         javax.swing.GroupLayout pnHeaderTambah1Layout = new javax.swing.GroupLayout(pnHeaderTambah1);
         pnHeaderTambah1.setLayout(pnHeaderTambah1Layout);
         pnHeaderTambah1Layout.setHorizontalGroup(
             pnHeaderTambah1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnHeaderTambah1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 1029, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 1041, Short.MAX_VALUE)
         );
         pnHeaderTambah1Layout.setVerticalGroup(
             pnHeaderTambah1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnHeaderTambah1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel12)
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addGap(0, 88, Short.MAX_VALUE)
         );
 
         tblPencarian.setModel(new javax.swing.table.DefaultTableModel(
@@ -165,10 +164,19 @@ public class FormCariProduk extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton btnPencarian;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+=======
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
     private javax.swing.JPanel pnHeaderTambah1;
     private javax.swing.JTable tblPencarian;
     private javax.swing.JTextField txtPencarian;

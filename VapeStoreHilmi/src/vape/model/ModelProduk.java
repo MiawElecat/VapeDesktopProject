@@ -1,7 +1,7 @@
 package vape.model;
 
 public class ModelProduk {
-  
+
     public String getId_data_produk() {
         return id_data_produk;
     }
@@ -10,20 +10,20 @@ public class ModelProduk {
         this.id_data_produk = id_data_produk;
     }
 
-    public ModelDistributor getMod_id_distributor() {
-        return mod_id_distributor;
+    public ModelDistributor getMod_distributor() {
+        return mod_distributor;
     }
 
-    public void setMod_id_distributor(ModelDistributor mod_id_distributor) {
-        this.mod_id_distributor = mod_id_distributor;
+    public void setMod_distributor(ModelDistributor mod_distributor) {
+        this.mod_distributor = mod_distributor;
     }
 
-    public ModelKategori getMod_idkategori() {
-        return mod_idkategori;
+    public ModelKategori getMod_kategori() {
+        return mod_kategori;
     }
 
-    public void setMod_idkategori(ModelKategori mod_idkategori) {
-        this.mod_idkategori = mod_idkategori;
+    public void setMod_kategori(ModelKategori mod_kategori) {
+        this.mod_kategori = mod_kategori;
     }
 
     public String getBarcode() {
@@ -75,8 +75,8 @@ public class ModelProduk {
     }
 
     private String id_data_produk;
-    private ModelDistributor mod_id_distributor;
-    private ModelKategori mod_idkategori;
+    private ModelDistributor mod_distributor;
+    private ModelKategori mod_kategori;
     private String barcode;
     private String nama_produk;
     private int jumlah_stok;
