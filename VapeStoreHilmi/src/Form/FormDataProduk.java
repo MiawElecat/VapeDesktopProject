@@ -1,11 +1,8 @@
 package Form;
 
 import com.formdev.flatlaf.FlatClientProperties;
-<<<<<<< HEAD
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-=======
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,35 +31,17 @@ public class FormDataProduk extends javax.swing.JPanel {
     private final Map<String, String> kategoriMap;
     private final Map<String, String> distributorMap;
     private ModelProduk produk;
-<<<<<<< HEAD
     List<ActionListener> savedListeners = new ArrayList<>();
-=======
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
 
     public FormDataProduk() {
         initComponents();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         kategoriMap = new HashMap<>();
         distributorMap = new HashMap<>();
         tabelproduk.setModel(tabel);
         loadData();
         btnBatal.setVisible(false);
-<<<<<<< HEAD
         
-=======
-=======
-<<<<<<< HEAD
-        setLayoutForm();
-=======
-        //tblData.setModel(tblModel);
-        //loadData();
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     }
 
     @SuppressWarnings("unchecked")
@@ -77,21 +56,8 @@ public class FormDataProduk extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-<<<<<<< HEAD
         tabelproduk = new javax.swing.JTable();
         btnBatal = new javax.swing.JButton();
-=======
-<<<<<<< HEAD
-        tabelproduk = new javax.swing.JTable();
-=======
-<<<<<<< HEAD
-        tblDataProduk = new javax.swing.JTable();
-=======
-        jTable1 = new javax.swing.JTable();
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
-        btnBatal = new javax.swing.JButton();
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -107,30 +73,12 @@ public class FormDataProduk extends javax.swing.JPanel {
         txtBeli = new javax.swing.JTextField();
         txtJual = new javax.swing.JTextField();
         txtJumlahStok = new javax.swing.JTextField();
-<<<<<<< HEAD
-        btnSimpan4 = new javax.swing.JButton();
-        btnBatal4 = new javax.swing.JButton();
-=======
-<<<<<<< HEAD
-        cbxStatus = new javax.swing.JComboBox<>();
-        btnSimpan = new javax.swing.JButton();
-        btnBatal = new javax.swing.JButton();
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
-        pnHeaderTambah = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        cbxKategori = new javax.swing.JComboBox<>();
-<<<<<<< HEAD
-        cbxDistributor = new javax.swing.JComboBox<>();
-=======
-=======
         btnSimpan4 = new javax.swing.JButton();
         btnBatal4 = new javax.swing.JButton();
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         cbxKategori = new javax.swing.JComboBox<>();
         cbxDistributor = new javax.swing.JComboBox<>();
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         setLayout(new java.awt.CardLayout());
 
@@ -170,18 +118,8 @@ public class FormDataProduk extends javax.swing.JPanel {
             }
         });
 
-<<<<<<< HEAD
         tabelproduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tabelproduk.setModel(new javax.swing.table.DefaultTableModel(
-=======
-<<<<<<< HEAD
-        tabelproduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        tabelproduk.setModel(new javax.swing.table.DefaultTableModel(
-=======
-        tblDataProduk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        tblDataProduk.setModel(new javax.swing.table.DefaultTableModel(
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -192,24 +130,12 @@ public class FormDataProduk extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        tabelproduk.setRowHeight(30);
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         tabelproduk.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabelprodukMouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(tabelproduk);
-<<<<<<< HEAD
-=======
-=======
-        tblDataProduk.setRowHeight(30);
-        jScrollPane2.setViewportView(tblDataProduk);
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         btnBatal.setBackground(new java.awt.Color(72, 63, 139));
         btnBatal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -256,18 +182,11 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< HEAD
                 .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-=======
-                .addGroup(pnUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
                 .addGap(30, 30, 30))
@@ -310,28 +229,11 @@ public class FormDataProduk extends javax.swing.JPanel {
 
         txtJumlahStok.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        cbxStatus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        cbxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Status", "Ada", "Habis" }));
-
-        btnSimpan.setBackground(new java.awt.Color(72, 63, 139));
-        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
-        btnSimpan.setText("Simpan");
-        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
-=======
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
         btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSimpan4.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan4.setText("Simpan");
         btnSimpan4.addActionListener(new java.awt.event.ActionListener() {
-<<<<<<< HEAD
-=======
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanActionPerformed(evt);
             }
@@ -371,7 +273,6 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-<<<<<<< HEAD
         cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
         cbxKategori.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -381,25 +282,6 @@ public class FormDataProduk extends javax.swing.JPanel {
                 cbxKategoriMouseReleased(evt);
             }
         });
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        btnPencarianDistributor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
-
-        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel47.setText("Kategori");
-
-        txtDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-
-        cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
-=======
-        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel47.setText("Kategori");
-
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
-        cbxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         cbxKategori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxKategoriActionPerformed(evt);
@@ -407,10 +289,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         });
 
         cbxDistributor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Liquid", "Coil", "Kapas" }));
-<<<<<<< HEAD
-=======
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -435,7 +313,6 @@ public class FormDataProduk extends javax.swing.JPanel {
                             .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-<<<<<<< HEAD
                         .addGap(161, 161, 161)
                         .addComponent(btnSimpan4)
                         .addGap(30, 30, 30)
@@ -454,85 +331,6 @@ public class FormDataProduk extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(573, Short.MAX_VALUE))
-=======
-<<<<<<< HEAD
-                        .addGap(185, 185, 185)
-                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel40)
-                            .addComponent(jLabel41))
-                        .addGap(57, 57, 57)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtBarcode, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
-                            .addComponent(cbxDistributor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(573, Short.MAX_VALUE))
-=======
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel39)
-                                    .addComponent(jLabel40)
-                                    .addComponent(jLabel41)
-                                    .addComponent(jLabel47))
-                                .addGap(57, 57, 57)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtBarcode, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
-                                    .addComponent(txtIdProduk, javax.swing.GroupLayout.Alignment.TRAILING)
-<<<<<<< HEAD
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(cbxKategori, 0, 397, Short.MAX_VALUE)
-                                            .addComponent(txtDistributor))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                                        .addComponent(btnPencarianDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-=======
-                                    .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbxDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel43)
-                                        .addComponent(jLabel44)
-                                        .addComponent(jLabel45))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(txtBeli, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-<<<<<<< HEAD
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel42)
-                                        .addComponent(jLabel46))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addGap(38, 38, 38)
-                                            .addComponent(cbxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
-=======
-                                    .addComponent(jLabel42)
-                                    .addGap(38, 38, 38)
-                                    .addComponent(txtProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
-                                .addComponent(txtJual, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(533, Short.MAX_VALUE))
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -547,33 +345,6 @@ public class FormDataProduk extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
                     .addComponent(txtBarcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(btnPencarianDistributor))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel41))))
-                .addGap(16, 16, 16)
-=======
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
-                    .addComponent(cbxDistributor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
-=======
-                .addGap(27, 27, 27)
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel47)
-                    .addComponent(cbxKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel41)
@@ -596,25 +367,9 @@ public class FormDataProduk extends javax.swing.JPanel {
                     .addComponent(txtJumlahStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-<<<<<<< HEAD
                     .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(338, Short.MAX_VALUE))
-=======
-<<<<<<< HEAD
-                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(227, Short.MAX_VALUE))
-=======
-                    .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
-                .addContainerGap(338, Short.MAX_VALUE))
-=======
-                .addContainerGap(289, Short.MAX_VALUE))
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         );
 
         javax.swing.GroupLayout pnTambahLayout = new javax.swing.GroupLayout(pnTambah);
@@ -636,10 +391,7 @@ public class FormDataProduk extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
-<<<<<<< HEAD
 //        List<ActionListener> savedListeners = new ArrayList<>();
-=======
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         if(btnTambah.getText().equals("Tambah Produk")){
             mainPanel.removeAll();
             mainPanel.repaint();
@@ -648,7 +400,6 @@ public class FormDataProduk extends javax.swing.JPanel {
             mainPanel.add(pnTambah);
             mainPanel.repaint();
             mainPanel.revalidate();
-<<<<<<< HEAD
              for (ActionListener listener : savedListeners) {
                 cbxKategori.addActionListener(listener);
             }
@@ -657,10 +408,6 @@ public class FormDataProduk extends javax.swing.JPanel {
             getKategori();
             getDistributor();
 //            nomorOtomatis();
-=======
-            getKategori();
-            getDistributor();
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 //            txtIdProduk.setText(service.nomor()); 
         }else if(btnTambah.getText().equals("Ubah")){
             mainPanel.removeAll();
@@ -670,7 +417,6 @@ public class FormDataProduk extends javax.swing.JPanel {
             mainPanel.add(pnTambah);
             mainPanel.repaint();
             mainPanel.revalidate();
-<<<<<<< HEAD
             // Simpan action listener ComboBox sebelum dihapus
 
             // Hapus semua action listener dari ComboBox
@@ -689,11 +435,6 @@ public class FormDataProduk extends javax.swing.JPanel {
 
 
 
-=======
-            getKategori();
-            getDistributor();
-            dataTabel();
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         }
     }//GEN-LAST:event_btnTambahActionPerformed
 
@@ -722,10 +463,7 @@ public class FormDataProduk extends javax.swing.JPanel {
             mainPanel.add(pnUtama);
             mainPanel.repaint();
             mainPanel.revalidate();
-<<<<<<< HEAD
             
-=======
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         }else if(btnSimpan4.getText().equals("Simpan")){
             SimpanData();
         }
@@ -741,16 +479,12 @@ public class FormDataProduk extends javax.swing.JPanel {
         if(btnTambah.getText().equals("Tambah Produk"))
     {
         btnTambah.setText("Ubah");
-<<<<<<< HEAD
 
-=======
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     }   
     btnBatal.setVisible(true); 
     }//GEN-LAST:event_tabelprodukMouseClicked
 
     private void cbxKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxKategoriActionPerformed
-<<<<<<< HEAD
         nomorOtomatis();
     }//GEN-LAST:event_cbxKategoriActionPerformed
 
@@ -781,35 +515,9 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnBatal4;
     private javax.swing.JButton btnSimpan4;
-=======
-        String character = (String) cbxKategori.getSelectedItem();
-        String character1 = character.substring(0,3).toUpperCase();
-        String idProduk = service.nomor(character1);
-        txtIdProduk.setText(idProduk);
-        txtIdProduk.setEnabled(false);
-    }//GEN-LAST:event_cbxKategoriActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBatal;
-<<<<<<< HEAD
-    private javax.swing.JButton btnPencarianDistributor;
-    private javax.swing.JButton btnSimpan;
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JButton btnTambah;
     private javax.swing.JComboBox<String> cbxDistributor;
     private javax.swing.JComboBox<String> cbxKategori;
-<<<<<<< HEAD
-=======
-    private javax.swing.JComboBox<String> cbxStatus;
-=======
-    private javax.swing.JButton btnBatal4;
-    private javax.swing.JButton btnSimpan4;
-    private javax.swing.JButton btnTambah;
-    private javax.swing.JComboBox<String> cbxDistributor;
-    private javax.swing.JComboBox<String> cbxKategori;
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel39;
@@ -827,30 +535,15 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
-<<<<<<< HEAD
     private javax.swing.JTable tabelproduk;
     private javax.swing.JTextField txtBarcode;
     private javax.swing.JTextField txtBeli;
-=======
-<<<<<<< HEAD
-    private javax.swing.JTable tabelproduk;
-=======
-    private javax.swing.JTable tblDataProduk;
->>>>>>> a8bfc3fe4f3a969c7641930632382f0089e965e9
-    private javax.swing.JTextField txtBarcode;
-    private javax.swing.JTextField txtBeli;
-<<<<<<< HEAD
-    private javax.swing.JTextField txtDistributor;
-=======
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JTextField txtIdProduk;
     private javax.swing.JTextField txtJual;
     private javax.swing.JTextField txtJumlahStok;
     private javax.swing.JTextField txtPencarian;
     private javax.swing.JTextField txtProduk;
     // End of variables declaration//GEN-END:variables
-<<<<<<< HEAD
     private void nomorOtomatis(){
         if(cbxKategori.getSelectedItem()!= null){
         String character = (String) cbxKategori.getSelectedItem();
@@ -860,33 +553,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         txtIdProduk.setEnabled(false);
         }
     }
-=======
-
-<<<<<<< HEAD
-    private void setLayoutForm() {
-        pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
-                + "background:rgb(72,63,139);"
-                + "arc:20;");
-        txtIdProduk.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtBarcode.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtBeli.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtJual.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtJumlahStok.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtPencarian.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        txtNama.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-        cbxStatus.putClientProperty(FlatClientProperties.STYLE, ""
-                + "arc:20;");
-    }
-=======
->>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     
     private void loadData() {
         btnTambah.setText("Tambah Produk");
@@ -992,7 +658,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         boolean valid = false;
         if(txtIdProduk.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(null, "ID Produk Tidak Boleh Kosong");
-<<<<<<< HEAD
         }   else if(cbxKategori.getSelectedItem().equals("Pilih Kategori")){
                 JOptionPane.showMessageDialog(null, "Harap Pilih Kategori");
         }   else if(txtBarcode.getText().trim().isEmpty()){
@@ -1008,23 +673,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         }   else if(txtJumlahStok.getText().trim().isEmpty()){
                 JOptionPane.showMessageDialog(null, "Jumlah Stok Tidak Boleh Kosong");
             }else{
-=======
-        }else if(cbxKategori.getSelectedItem().equals("Pilih Kategori")){
-            JOptionPane.showMessageDialog(null, "Harap Pilih Kategori");
-        }else if(txtBarcode.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Barcode Tidak Boleh Kosong");
-        }else if(cbxDistributor.getSelectedItem().equals("Pilih Distributor")){
-            JOptionPane.showMessageDialog(null, "Harap Pilih Distributor");
-        }else if(txtProduk.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Nama Produk Tidak Boleh Kosong");
-        }else if(txtBeli.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Harga Beli Tidak Boleh Kosong");
-        }else if(txtJual.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Harga Jual Tidak Boleh Kosong");
-        }else if(txtJumlahStok.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Jumlah Stok Tidak Boleh Kosong");
-        }else{
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                 valid=true;
             }
             return valid;

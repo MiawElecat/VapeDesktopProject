@@ -67,13 +67,8 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-<<<<<<< HEAD
                               <Component id="DateChooser1" alignment="0" pref="160" max="32767" attributes="0"/>
                               <Component id="DateChooser2" alignment="0" max="32767" attributes="0"/>
-=======
-                              <Component id="jDateChooser1" alignment="0" pref="160" max="32767" attributes="0"/>
-                              <Component id="jDateChooser2" alignment="0" max="32767" attributes="0"/>
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                           </Group>
                       </Group>
                   </Group>
@@ -87,19 +82,11 @@
                   <EmptySpace pref="15" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
                       <Component id="DateChooser1" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="DateChooser2" alignment="0" min="-2" max="-2" attributes="0"/>
-=======
-                      <Component id="jDateChooser1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jDateChooser2" alignment="0" min="-2" max="-2" attributes="0"/>
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -126,15 +113,9 @@
             <Property name="text" type="java.lang.String" value="Dari Tanggal"/>
           </Properties>
         </Component>
-<<<<<<< HEAD
         <Component class="com.toedter.calendar.JDateChooser" name="DateChooser1">
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="DateChooser2">
-=======
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
->>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         </Component>
         <Component class="javax.swing.JButton" name="btn_print">
           <Properties>
