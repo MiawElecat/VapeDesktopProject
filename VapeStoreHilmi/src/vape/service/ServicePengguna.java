@@ -22,7 +22,7 @@ public interface ServicePengguna {
     List<ModelPengguna>pencarianData(String id);
     
 //    String generateSHA256(String password);
-    ModelPengguna prosesLogin(ModelPengguna model);
+    ModelPengguna prosesLogin(ModelPengguna model); 
 
    
     boolean register (String username, String password, String hewan);

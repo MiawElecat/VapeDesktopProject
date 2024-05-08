@@ -22,10 +22,10 @@ import javax.swing.JOptionPane;
 import vape.model.ModelPengguna;
 import vape.service.ServicePengguna;
 
-public class PenggunaDAO implements ServicePengguna {
+public class DAO_Pengguna implements ServicePengguna {
     
     private Connection conn;
-    public PenggunaDAO(){
+    public DAO_Pengguna(){
         conn= Koneksi.getConnection();
     }
 

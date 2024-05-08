@@ -6,6 +6,7 @@ import Form.Login;
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
 import java.awt.Component;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import vape.model.ModelPengguna;
 
@@ -16,10 +17,16 @@ public class MenuUtama extends javax.swing.JFrame {
     private final Login FormLogin;
     private static MenuUtama app;
     private final Main mainForm;
+    private String Level;
     
-    public MenuUtama(String Id, String Nama) {
+    public String Id;
+    
+    
+    public MenuUtama() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+//        Label_ID.setText(Id);
+//        Label_ID.setVisible(false);
         FormLogin = new Login();
         mainForm = new Main();
         setContentPane (FormLogin);
@@ -51,7 +58,8 @@ public class MenuUtama extends javax.swing.JFrame {
         FlatLightLaf.setup();
         
         java.awt.EventQueue.invokeLater(() -> {
-            app = new MenuUtama("Id","Nama");
+            String Level = null;
+            app = new MenuUtama();
             app.setVisible(true);
         });
     }
@@ -62,10 +70,11 @@ public class MenuUtama extends javax.swing.JFrame {
     }
     
     
-    public static void login(ModelPengguna model) {
+    public static void login(ModelPengguna  modelpeng) {
         FlatAnimatedLafChange.showSnapshot();
         app.setContentPane(app.mainForm);
         app.mainForm.applyComponentOrientation(app.getComponentOrientation());
+        app.mainForm.getModelPengguna(modelpeng);
         setSelectedMenu(0,0);
         app.mainForm.hideMenu();
         SwingUtilities.updateComponentTreeUI(app.mainForm);
@@ -73,11 +82,21 @@ public class MenuUtama extends javax.swing.JFrame {
     }
     
     public static void logout() {
-        FlatAnimatedLafChange.showSnapshot();
-        app.setContentPane(app.FormLogin);
-        app.FormLogin.applyComponentOrientation(app.getComponentOrientation());
-        SwingUtilities.updateComponentTreeUI(app.FormLogin);
-        FlatAnimatedLafChange.hideSnapshotWithAnimation();
+    int confirm = JOptionPane.showConfirmDialog(
+        app,
+        "Anda yakin ingin logout?",
+        "Konfirmasi Logout",
+        JOptionPane.YES_NO_OPTION,
+        JOptionPane.QUESTION_MESSAGE
+    );
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            FlatAnimatedLafChange.showSnapshot();
+            app.setContentPane(app.FormLogin);
+            app.FormLogin.applyComponentOrientation(app.getComponentOrientation());
+            SwingUtilities.updateComponentTreeUI(app.FormLogin);
+            FlatAnimatedLafChange.hideSnapshotWithAnimation();
+        }
     }
     
     public static void setSelectedMenu(int index, int subMenu) {

@@ -20,4 +20,6 @@ public interface ServiceDistributor {
     List<ModelDistributor>search(String id);
     
     String nomor();  
+    List<ModelDistributor> getDistributor();
+    String getDistributorID(String id);
 }

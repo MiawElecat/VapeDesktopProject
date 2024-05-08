@@ -58,7 +58,7 @@ public class ModelPengguna {
         this.password = password;
     }
 
-    private String id_pengguna;
+    public String id_pengguna;
     private String nama_pengguna;
     private String level;
     private String no_telepon;

@@ -58,7 +58,7 @@ public class TabelModelTransaksiSementara extends AbstractTableModel {
         return list.size();
     }
     
-    private final String[] namaKolom = {"No","Kode Produk","Nama Produk","Harga","Jumlah","Subtotal Harga"};
+    private final String[] namaKolom = {"No","Barcode","Kode Produk","Nama Produk","Harga","Stok","Jumlah","Subtotal Harga"};
 
 
     @Override
@@ -72,11 +72,13 @@ public class TabelModelTransaksiSementara extends AbstractTableModel {
             return"   " + (rowIndex + 1);
         }else{
         switch (columnIndex-1){
-        case 0:return list.get(rowIndex).getMod_dataproduk().getId_data_produk();
-        case 1:return list.get(rowIndex).getMod_dataproduk().getNama_produk();
-        case 2:return list.get(rowIndex).getMod_dataproduk().getHarga_jual();
-        case 3:return list.get(rowIndex).getMod_dettransaksi().getJumlah_barang();
-        case 4:return list.get(rowIndex).getMod_dettransaksi().getSubtotal_harga();
+        case 0:return list.get(rowIndex).getMod_dataproduk().getBarcode();
+        case 1:return list.get(rowIndex).getMod_dataproduk().getId_data_produk();
+        case 2:return list.get(rowIndex).getMod_dataproduk().getNama_produk();
+        case 3:return list.get(rowIndex).getMod_dataproduk().getHarga_jual();
+        case 4:return list.get(rowIndex).getMod_dataproduk().getJumlah_stok();
+        case 5:return list.get(rowIndex).getMod_dettransaksi().getJumlah_barang();
+        case 6:return list.get(rowIndex).getMod_dettransaksi().getSubtotal_harga();
         
         default: return null;
             }

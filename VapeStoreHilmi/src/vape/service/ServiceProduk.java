@@ -11,10 +11,11 @@ public interface ServiceProduk {
     List<ModelProduk>getDataByID();
     List<ModelProduk>getData();
     List<ModelProduk>getDataID(String id);
+    List<ModelProduk>SearchDataByBArcode(String id);
     
     List<ModelProduk>search(String id);
     List<ModelProduk>search2(String id);
     
-    String nomor();
+    String nomor(String id);
     String nomor2();
 }

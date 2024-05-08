@@ -26,13 +26,16 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import vape.menu.Menu;
 import vape.menu.MenuAction;
+import vape.model.ModelPengguna;
 
 public class Main extends JLayeredPane {
 
     private Menu menu;
     private JPanel panelBody;
     private JButton menuButton;
+    private ModelPengguna model;
     
+    private String Level;
     
     public Main() {
         init();
@@ -69,16 +72,23 @@ public class Main extends JLayeredPane {
         menuButton.setIcon(new FlatSVGIcon("Icon/" + icon, 0.8f));
     }
     
+    public void getModelPengguna(ModelPengguna model){
+        this.model = model;
+    }
     private void initMenuEvent() {
         menu.addMenuEvent((int index, int subIndex, MenuAction action) -> {
+            if(model.getLevel()!= null){
             if (index == 0) {
                 MenuUtama.showForm(new FormDashboard());
-            } else if (index == 1) {
-                MenuUtama.showForm(new FormTransaksiPenjualan());
-            } else if (index == 2) {
+            } else if (model.getLevel().equals("Owner")) {
+                if (index == 0) {
+                MenuUtama.showForm(new FormDashboard());
+                }else if(index == 1 ) {
+                MenuUtama.showForm(new FormTransaksiPenjualan(model));
+                } else if (index == 2) {
                 MenuUtama.showForm(new FormTransaksiPembelian());
-            } else if (index == 3) {
-               if (subIndex == 1) {
+                } else if (index == 3) {
+                       if (subIndex == 1) {
                     MenuUtama.showForm(new FormDataProduk());
                 } else if (subIndex == 2) {
                     MenuUtama.showForm(new FormDistributor()); 
@@ -86,19 +96,31 @@ public class Main extends JLayeredPane {
                     MenuUtama.showForm(new FormKategori());
                 } else if (subIndex == 4) {
                     MenuUtama.showForm(new FormDataPengguna());
+                }
+                } else if (index == 4) {
+               MenuUtama.showForm(new FormPenjualan());
+                } else if (index == 5) {
+               MenuUtama.showForm(new FormPembelian());
+                } else if (index == 6) {
+               MenuUtama.showForm(new FormRestock());
+                } else if (index == 7) {
+               MenuUtama.logout();
                 } else {
                     action.cancel();
                 }
-            } else if (index == 4) {
-               MenuUtama.showForm(new FormPenjualan());
-            } else if (index == 5) {
-               MenuUtama.showForm(new FormPembelian());
-            } else if (index == 6) {
-               MenuUtama.showForm(new FormRestock());
+            } else if (model.getLevel().equals("Karyawan")){
+                
+             if (index == 0) {
+               MenuUtama.showForm(new FormDashboard());
+            } else if (index == 1) {
+               MenuUtama.showForm(new FormTransaksiPenjualan(model));
             } else if (index == 7) {
                MenuUtama.logout();
+            }else {
+                action.cancel();
             }
-        });
+            }
+        }});
     }
     
     private void setMenuFull(boolean full) {

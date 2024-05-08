@@ -14,12 +14,13 @@ import vape.model.ModelKategori;
 public interface ServiceKategori {
     void tambahData     (ModelKategori mod_kategori);
     void perbaruiData   (ModelKategori mod_kategori);
-    void hapusData      (ModelKategori mod_kategori);
     
     ModelKategori getByid (String id);
     
     List<ModelKategori>getData();
     List<ModelKategori>search(String id);
     
-    String nomor();  
+    List<ModelKategori> getKategori();
+    String getKategoriID(String id);
+    
 }

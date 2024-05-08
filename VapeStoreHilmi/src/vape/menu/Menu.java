@@ -19,8 +19,9 @@ import javax.swing.JScrollPane;
 
 
 public class Menu extends JPanel {
+    
 
-    private final String menuItemsOwner[][] = {
+    private final String menuitems[][] = {
         {"~Main~"},
         {"Dashboard"},
         {"~Transaksi~"},
@@ -36,18 +37,7 @@ public class Menu extends JPanel {
         {"Logout"}
     };
     
-    private final String menuItemsKaryawan[][] = {
-        {"~Main~"},
-        {"Dashboard"},
-        {"~Master~"},
-        {"Data Master", "Data Produk", "Data Supplier"},
-        {"~Laporan~"},
-        {"Transaksi", "Penjualan", "Pembelian"},
-        {"Detail Transaksi"},
-        {"~Restock Barang~"},
-        {"Restock Barang"},
-        {"Logout"}
-    };
+
 
     public boolean isMenuFull() {
         return menuFull;
@@ -81,6 +71,8 @@ public class Menu extends JPanel {
     protected final int menuMaxWidth = 250;
     protected final int menuMinWidth = 60;
     protected final int headerFullHgap = 5;
+    
+
 
     public Menu() {
         init();
@@ -124,13 +116,14 @@ public class Menu extends JPanel {
     }
 
     private void createMenu() {
+        
         int index = 0;
-        for (int i = 0; i < menuItemsOwner.length; i++) {
-            String menuName = menuItemsOwner[i][0];
+        for (int i = 0; i < menuitems.length; i++) {
+            String menuName = menuitems[i][0];
             if (menuName.startsWith("~") && menuName.endsWith("~")) {
                 panelMenu.add(createTitle(menuName));
             } else {
-                MenuItem menuItem = new MenuItem(this, menuItemsOwner[i], index++, events);
+                MenuItem menuItem = new MenuItem(this, menuitems[i], index++, events);
                 panelMenu.add(menuItem);
             }
         }
