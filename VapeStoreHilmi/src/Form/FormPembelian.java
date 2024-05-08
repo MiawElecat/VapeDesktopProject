@@ -5,7 +5,10 @@
 package Form;
 
 import java.text.SimpleDateFormat;
+<<<<<<< HEAD
 import java.util.Date;
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 import vape.DAO.DAO_Laporan;
 import vape.service.ServiceLaporan;
 
@@ -137,16 +140,23 @@ public class FormPembelian extends javax.swing.JPanel {
         // TODO add your handling code here:
         pn_tampilLaporan.removeAll();
         
+<<<<<<< HEAD
         Date tgl1 = jDateChooser1.getDate();
         Date tgl2 = jDateChooser2.getDate();
         
    /*     
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
        String tgl = "yyyy-MM-dd";
        SimpleDateFormat fm = new SimpleDateFormat(tgl);
        
        String tgl1 = String.valueOf(fm.format(jDateChooser1.getDate()));
        String tgl2 = String.valueOf(fm.format(jDateChooser2.getDate()));
+<<<<<<< HEAD
     */   
+=======
+       
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
        servis_lap.lapPembelianPerPeriode(pn_tampilLaporan,tgl1,tgl2);
     }//GEN-LAST:event_btn_printActionPerformed
 

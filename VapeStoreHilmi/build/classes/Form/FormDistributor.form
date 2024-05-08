@@ -133,7 +133,15 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
+<<<<<<< HEAD
                     <Component class="javax.swing.JTable" name="tabeldistributor">
+=======
+<<<<<<< HEAD
+                    <Component class="javax.swing.JTable" name="tblDistributor">
+=======
+                    <Component class="javax.swing.JTable" name="tabeldistributor">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -221,7 +229,15 @@
                                       <Component id="txtIdDistributor" pref="482" max="32767" attributes="0"/>
                                       <Component id="txtNama" alignment="1" max="32767" attributes="0"/>
                                       <Component id="txtAlamat" alignment="1" max="32767" attributes="0"/>
+<<<<<<< HEAD
                                       <Component id="txtNomor" alignment="1" max="32767" attributes="0"/>
+=======
+<<<<<<< HEAD
+                                      <Component id="txtTelepon" alignment="1" max="32767" attributes="0"/>
+=======
+                                      <Component id="txtNomor" alignment="1" max="32767" attributes="0"/>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -257,7 +273,15 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+<<<<<<< HEAD
                               <Component id="txtNomor" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
+<<<<<<< HEAD
+                              <Component id="txtTelepon" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
+                              <Component id="txtNomor" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                               <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -304,6 +328,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtIdDistributor">
+<<<<<<< HEAD
+=======
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
@@ -314,12 +340,25 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNama">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
                     </Property>
                   </Properties>
                 </Component>
+<<<<<<< HEAD
+                <Component class="javax.swing.JTextField" name="txtNama">
+=======
+                <Component class="javax.swing.JTextField" name="txtAlamat">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                  </Properties>
+                </Component>
+<<<<<<< HEAD
                 <Component class="javax.swing.JTextField" name="txtAlamat">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -327,7 +366,14 @@
                     </Property>
                   </Properties>
                 </Component>
+<<<<<<< HEAD
                 <Component class="javax.swing.JTextField" name="txtNomor">
+=======
+                <Component class="javax.swing.JTextField" name="txtTelepon">
+=======
+                <Component class="javax.swing.JTextField" name="txtNomor">
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>

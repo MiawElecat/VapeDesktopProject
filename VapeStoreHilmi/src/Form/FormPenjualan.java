@@ -5,7 +5,10 @@
 package Form;
 
 import java.text.SimpleDateFormat;
+<<<<<<< HEAD
 import java.util.Date;
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 import vape.DAO.DAO_Laporan;
 import vape.service.ServiceLaporan;
 
@@ -38,8 +41,13 @@ public class FormPenjualan extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+<<<<<<< HEAD
         DateChooser1 = new com.toedter.calendar.JDateChooser();
         DateChooser2 = new com.toedter.calendar.JDateChooser();
+=======
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         btn_print = new javax.swing.JButton();
         pn_tampilLaporan = new javax.swing.JPanel();
 
@@ -76,8 +84,13 @@ public class FormPenjualan extends javax.swing.JPanel {
                             .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+<<<<<<< HEAD
                             .addComponent(DateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                             .addComponent(DateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+=======
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                 .addContainerGap(380, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -86,10 +99,17 @@ public class FormPenjualan extends javax.swing.JPanel {
                 .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
+<<<<<<< HEAD
                     .addComponent(DateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(btn_print)
@@ -136,6 +156,7 @@ public class FormPenjualan extends javax.swing.JPanel {
     private void btn_printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_printActionPerformed
         // TODO add your handling code here:
         pn_tampilLaporan.removeAll();
+<<<<<<< HEAD
         
         Date tglT1 = DateChooser1.getDate();
         Date tglT2 = DateChooser2.getDate();
@@ -143,20 +164,33 @@ public class FormPenjualan extends javax.swing.JPanel {
          System.out.println("Nilai tglT1: " + tglT1);
          System.out.println("Nilai tglT2: " + tglT2);
 /*
+=======
+
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         String tgl = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tgl);
 
         String tglT1 = String.valueOf(fm.format(jDateChooser1.getDate()));
         String tglT2 = String.valueOf(fm.format(jDateChooser2.getDate()));
+<<<<<<< HEAD
 */
+=======
+
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         servis_lap.lapPenjualan(pn_tampilLaporan,tglT1,tglT2);
     }//GEN-LAST:event_btn_printActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private com.toedter.calendar.JDateChooser DateChooser1;
     private com.toedter.calendar.JDateChooser DateChooser2;
     private javax.swing.JButton btn_print;
+=======
+    private javax.swing.JButton btn_print;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -3,6 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+<<<<<<< HEAD
 	<parameter name="tgl1" class="java.util.Date">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -18,10 +19,30 @@
     pembelian.total_harga AS pembelian_total_harga
 FROM
     pembelian pembelian
+=======
+	<parameter name="tgl1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[String]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tgl2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[String]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+    pembelian.tanggal_pembelian AS pembelian_tanggal_pembelian,
+    pembelian.total_harga AS pembelian_total_harga,
+    distributor.id_distributor AS distributor_id_distributor,
+    distributor.nama_distributor AS distributor_nama_distributor,
+    pembelian.id_pembelian AS pembelian_id_pembelian
+FROM
+    pembelian pembelian
+INNER JOIN
+    distributor distributor ON pembelian.id_distributor = distributor.id_distributor
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 WHERE
     pembelian.tanggal_pembelian BETWEEN $P{tgl1} AND $P{tgl2}
 ]]>
 	</queryString>
+<<<<<<< HEAD
 	<field name="pembelian_id_pembelian" class="java.lang.String"/>
 	<field name="pembelian_id_pengguna" class="java.lang.String"/>
 	<field name="pembelian_id_distributor" class="java.lang.String"/>
@@ -33,19 +54,38 @@ WHERE
 	<variable name="total_harga_1" class="java.lang.Double" calculation="Sum">
 		<variableExpression><![CDATA[$F{total_harga}]]></variableExpression>
 	</variable>
+=======
+	<field name="pembelian_tanggal_pembelian" class="java.sql.Date"/>
+	<field name="pembelian_total_harga" class="java.lang.Double"/>
+	<field name="distributor_id_distributor" class="java.lang.String"/>
+	<field name="distributor_nama_distributor" class="java.lang.String"/>
+	<field name="pembelian_id_pembelian" class="java.lang.String"/>
+	<variable name="id_distributor_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{id_distributor}]]></variableExpression>
+	</variable>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
+<<<<<<< HEAD
 		<band height="125" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="555" height="55" uuid="a0f92afc-8040-42cb-8afb-d7454b450c6e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Adobe Caslon Pro Bold" size="30" isBold="true"/>
+=======
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="63" uuid="8933a543-6ce0-4eec-b440-342e29f1ba4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="30" isBold="true"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[Vape R Store]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="0" y="55" width="555" height="23" uuid="2e20f8c9-4060-42b1-891c-889fddbb4b31"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
@@ -90,6 +130,38 @@ WHERE
 			</textField>
 			<textField>
 				<reportElement x="288" y="28" width="100" height="20" uuid="177b77fc-df49-470f-a078-9bb98d07b696"/>
+=======
+				<reportElement x="0" y="63" width="555" height="16" uuid="42649265-6c3d-4c8a-8cd9-084ce37f4536"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Hal	:Laporan Pembelian Barang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="75" height="22" uuid="622325ee-9ef0-4f60-b0fb-3ba9ac8b3b65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Dari Tanggal :				]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="13" width="100" height="22" uuid="de18cdc0-8e88-4fc7-b328-64ff1aabf4d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Sampai Tanggal :				]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="15" width="100" height="20" uuid="5ccf08e2-9556-4276-8443-80bedf7c62a0"/>
+				<textFieldExpression><![CDATA[$P{tgl1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="15" width="100" height="20" uuid="dcacf3cd-5210-4411-a3da-d3569915dc5e"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<textFieldExpression><![CDATA[$P{tgl2}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -97,7 +169,11 @@ WHERE
 	<columnHeader>
 		<band height="61" splitType="Stretch">
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="0" y="41" width="37" height="20" uuid="a77d3bf9-5c2f-4fba-a590-09fb565e6a36"/>
+=======
+				<reportElement x="0" y="41" width="48" height="20" uuid="a77d3bf9-5c2f-4fba-a590-09fb565e6a36"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -111,7 +187,11 @@ WHERE
 				<text><![CDATA[No]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="37" y="41" width="94" height="20" uuid="d185e6a3-ec34-4cbb-8856-dd3be763e1c8"/>
+=======
+				<reportElement x="148" y="41" width="100" height="20" uuid="d6904ddf-4a08-4830-8169-3ceb5a855e03"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -119,6 +199,7 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[id_pembelian]]></text>
 			</staticText>
@@ -136,6 +217,15 @@ WHERE
 			</staticText>
 			<staticText>
 				<reportElement x="232" y="41" width="101" height="20" uuid="8ef2ce46-da1b-4be2-a0f0-3b9f9f1a456f"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[id_pengguna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="41" width="111" height="20" uuid="6f716694-43ca-4503-8a2e-3766f9848ebd"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -143,6 +233,7 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[id_distributor]]></text>
 			</staticText>
@@ -160,6 +251,15 @@ WHERE
 			</staticText>
 			<staticText>
 				<reportElement x="444" y="41" width="111" height="20" uuid="95ca1948-8bd8-4c41-813a-c0a55a3eb81e"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[tanggal_pembelian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="41" width="100" height="20" uuid="0c24deca-94cf-4b49-9b19-9130770eefb8"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -167,15 +267,55 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[id_pembelian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="41" width="100" height="20" uuid="bf9d205e-bd7a-409f-9a74-0a71e0e4008c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[id_distributor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="41" width="96" height="20" uuid="fdc77a53-feb3-4b8e-9a9e-4b1a6ffb63bb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<text><![CDATA[total_harga]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
+<<<<<<< HEAD
 		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="37" height="20" uuid="505d5b89-860c-4c7d-8388-94fd5f12184c"/>
+=======
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="48" height="20" uuid="505d5b89-860c-4c7d-8388-94fd5f12184c"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -189,7 +329,11 @@ WHERE
 				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
 			</textField>
 			<textField>
+<<<<<<< HEAD
 				<reportElement x="37" y="0" width="94" height="20" uuid="8ee9393c-a4fa-4983-9607-7c971477fc12"/>
+=======
+				<reportElement x="48" y="0" width="100" height="20" uuid="e622f2a7-c810-441e-8fda-7633fbd416fc"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -197,11 +341,21 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{id_pembelian}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="131" y="0" width="101" height="20" uuid="1e1a41dc-15ff-4cb0-9541-39210a4d92c8"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pembelian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="0" width="100" height="20" uuid="6457ac42-537f-44bf-b41b-1a0f8cb2072c"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -209,11 +363,21 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{id_pengguna}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="232" y="0" width="101" height="20" uuid="410af9bc-afb3-4739-bdd9-840e5fd83b0b"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pengguna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="0" width="100" height="20" uuid="5041e6d4-757f-4945-9600-8dc0cd22f900"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -221,11 +385,21 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{id_distributor}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="333" y="0" width="111" height="20" uuid="80be0036-a72d-4819-8cd3-fbd904b659df"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_distributor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="111" height="20" uuid="8d2d5a2c-31a0-4dd9-8176-cd08d4744e67"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -233,11 +407,21 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{tanggal_pembelian}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="444" y="0" width="111" height="20" uuid="e82525f9-e206-4ac3-936e-df3fcfcedeaf"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_pembelian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="0" width="96" height="20" uuid="64d5cb71-5bd3-4a7d-aca1-32ce2dd1d4ca"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -245,7 +429,13 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<textFieldExpression><![CDATA[$F{total_harga}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -257,6 +447,7 @@ WHERE
 		<band height="54" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
+<<<<<<< HEAD
 		<band height="100" splitType="Stretch">
 			<textField>
 				<reportElement x="444" y="0" width="111" height="20" uuid="8e1166ba-891c-4f62-81d3-acf5f57061ee"/>
@@ -287,5 +478,8 @@ WHERE
 				<text><![CDATA[Total]]></text>
 			</staticText>
 		</band>
+=======
+		<band height="42" splitType="Stretch"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 	</summary>
 </jasperReport>

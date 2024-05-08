@@ -49,8 +49,17 @@ public class FormDistributor extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
         tabeldistributor = new javax.swing.JTable();
         btnBatal = new javax.swing.JButton();
+=======
+<<<<<<< HEAD
+        tblDistributor = new javax.swing.JTable();
+=======
+        tabeldistributor = new javax.swing.JTable();
+        btnBatal = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -60,9 +69,21 @@ public class FormDistributor extends javax.swing.JPanel {
         txtIdDistributor = new javax.swing.JTextField();
         txtNama = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
+<<<<<<< HEAD
         txtNomor = new javax.swing.JTextField();
         btnSimpan4 = new javax.swing.JButton();
         btnBatal4 = new javax.swing.JButton();
+=======
+<<<<<<< HEAD
+        txtTelepon = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
+=======
+        txtNomor = new javax.swing.JTextField();
+        btnSimpan4 = new javax.swing.JButton();
+        btnBatal4 = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -90,8 +111,18 @@ public class FormDistributor extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         tabeldistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tabeldistributor.setModel(new javax.swing.table.DefaultTableModel(
+=======
+<<<<<<< HEAD
+        tblDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblDistributor.setModel(new javax.swing.table.DefaultTableModel(
+=======
+        tabeldistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tabeldistributor.setModel(new javax.swing.table.DefaultTableModel(
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -102,6 +133,13 @@ public class FormDistributor extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        tblDistributor.setRowHeight(30);
+        jScrollPane2.setViewportView(tblDistributor);
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         tabeldistributor.setRowHeight(30);
         tabeldistributor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -119,6 +157,10 @@ public class FormDistributor extends javax.swing.JPanel {
                 btnBatalActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -179,17 +221,34 @@ public class FormDistributor extends javax.swing.JPanel {
         jLabel42.setText("No. Telepon");
 
         txtIdDistributor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         txtIdDistributor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtIdDistributorMouseClicked(evt);
             }
         });
+<<<<<<< HEAD
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         txtNama.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         txtAlamat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
+<<<<<<< HEAD
         txtNomor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
+<<<<<<< HEAD
+        txtTelepon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
+        txtNomor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         btnSimpan4.setBackground(new java.awt.Color(72, 63, 139));
         btnSimpan4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -253,7 +312,15 @@ public class FormDistributor extends javax.swing.JPanel {
                             .addComponent(txtIdDistributor, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
                             .addComponent(txtNama)
                             .addComponent(txtAlamat)
+<<<<<<< HEAD
                             .addComponent(txtNomor)))
+=======
+<<<<<<< HEAD
+                            .addComponent(txtTelepon)))
+=======
+                            .addComponent(txtNomor)))
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(218, 218, 218)
                         .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -280,7 +347,15 @@ public class FormDistributor extends javax.swing.JPanel {
                     .addComponent(jLabel41))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
                     .addComponent(txtNomor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+<<<<<<< HEAD
+                    .addComponent(txtTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                    .addComponent(txtNomor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                     .addComponent(jLabel42))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -335,6 +410,14 @@ public class FormDistributor extends javax.swing.JPanel {
         tabel.setData(search);
     }//GEN-LAST:event_txtPencarianKeyReleased
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private void btnSimpanbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanbtnSimpanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimpanbtnSimpanActionPerformed
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private void btnSimpan4btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan4btnSimpanActionPerformed
         if(btnSimpan4.getText().equals("Perbarui")){
             perbaruiData();
@@ -346,15 +429,29 @@ public class FormDistributor extends javax.swing.JPanel {
             SimpanData();
         }
     }//GEN-LAST:event_btnSimpan4btnSimpanActionPerformed
+<<<<<<< HEAD
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
     private void btnBatal4btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal4btnBatalActionPerformed
         mainPanel.removeAll();
         mainPanel.add(pnUtama);
         mainPanel.repaint();
         mainPanel.revalidate();
+<<<<<<< HEAD
         loadData();
         resetForm();
     }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+=======
+<<<<<<< HEAD
+    }//GEN-LAST:event_btnBatalbtnBatalActionPerformed
+=======
+        loadData();
+        resetForm();
+    }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
     private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
         loadData();
@@ -378,8 +475,17 @@ public class FormDistributor extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
+<<<<<<< HEAD
     private javax.swing.JButton btnBatal4;
     private javax.swing.JButton btnSimpan4;
+=======
+<<<<<<< HEAD
+    private javax.swing.JButton btnSimpan;
+=======
+    private javax.swing.JButton btnBatal4;
+    private javax.swing.JButton btnSimpan4;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JButton btnTambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -395,12 +501,29 @@ public class FormDistributor extends javax.swing.JPanel {
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
+<<<<<<< HEAD
+    private javax.swing.JTable tabeldistributor;
+=======
+<<<<<<< HEAD
+    private javax.swing.JTable tblDistributor;
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
+    private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtIdDistributor;
+    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtNomor;
+    private javax.swing.JTextField txtPencarian;
+<<<<<<< HEAD
+=======
+    private javax.swing.JTextField txtTelepon;
+=======
     private javax.swing.JTable tabeldistributor;
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtIdDistributor;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtNomor;
     private javax.swing.JTextField txtPencarian;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     // End of variables declaration//GEN-END:variables
  private void loadData() {
         btnTambah.setText("Tambah Distributor");
@@ -504,6 +627,10 @@ public class FormDistributor extends javax.swing.JPanel {
     private void perbaruiData() {
         int index = tabeldistributor.getSelectedRow();
         if (index!=-1){
+<<<<<<< HEAD
+=======
+//            Model_Supplier mod_supplier = tblModel.getData(tabel_supplier.convertRowIndexToModel(index));
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
             
             if(validasiInput()==true){
             String id_distributor       = txtIdDistributor.getText();
@@ -511,13 +638,24 @@ public class FormDistributor extends javax.swing.JPanel {
             String alamat_distributor  = txtAlamat.getText();
             String no_tlp_distributor      = txtNomor.getText();
                 
+<<<<<<< HEAD
                 ModelDistributor ds = new ModelDistributor();
         
+=======
+//                Model_Data_Produk dp = new Model_Data_Produk();
+                ModelDistributor ds = new ModelDistributor();
+        
+//                dp.setIddata_produk(iddata_produk);
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                 ds.setId_distributor(id_distributor);
                 ds.setNama_distributor(nama_distributor);
                 ds.setAlamat_distributor(alamat_distributor);
                 ds.setNo_tlp_distributor(no_tlp_distributor);
         
+<<<<<<< HEAD
+=======
+//                dp.setMod_idsupplier(ms);
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                 
                 service.perbaruiData(ds);
                 tabel.perbaruiData(index,ds);

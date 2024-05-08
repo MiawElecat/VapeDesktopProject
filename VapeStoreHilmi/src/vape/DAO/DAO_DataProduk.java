@@ -68,10 +68,16 @@ public class DAO_DataProduk implements ServiceProduk{
 
     @Override
     public void perbaruiData(ModelProduk mod_produk) {
+<<<<<<< HEAD
         PreparedStatement st = null; 
         String sql = "UPDATE data_produk SET id_distributor=?, idkategori=?, barcode=?, nama_produk=?, jumlah_stok=?, harga_beli=?, harga_jual=? "
                 + "WHERE id_data_produk='"+mod_produk.getId_data_produk()+"'";
         System.out.println(sql);
+=======
+PreparedStatement st = null; 
+        String sql = "UPDATE data_produk SET id_distributor=?, idkategori=?, barcode=?, nama_produk=?, jumlah_stok=?, harga_beli=?, harga_jual=? "
+                + "WHERE id_data_produk='"+mod_produk.getId_data_produk()+"'";
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         try{
             st = connection.prepareStatement(sql);
             
@@ -84,7 +90,10 @@ public class DAO_DataProduk implements ServiceProduk{
             st.setDouble(7, mod_produk.getHarga_jual());
             
             st.executeUpdate();
+<<<<<<< HEAD
             System.out.println(st);
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, "Perbarui Data Gagal");
             Logger.getLogger(DAO_DataProduk.class.getName()).log(Level.SEVERE,null,ex);
@@ -281,6 +290,7 @@ public class DAO_DataProduk implements ServiceProduk{
     public String nomor2() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+<<<<<<< HEAD
 
     @Override
     public List<ModelProduk> SearchDataByBArcode(String id) {
@@ -313,5 +323,7 @@ public class DAO_DataProduk implements ServiceProduk{
         }
         return list;
     }
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     
 }

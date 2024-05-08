@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67a9905c-3109-42de-b5ea-f85a8f9b7d91">
 	<property name="ireport.zoom" value="1.0000000000000004"/>
 	<property name="ireport.x" value="0"/>
@@ -8,6 +9,17 @@
 	</parameter>
 	<parameter name="tglT2" class="java.util.Date">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+=======
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e1a665ba-7c06-4cde-9c58-f94d707bce26">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tglT1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[String]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tglT2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[String]]></defaultValueExpression>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
@@ -28,22 +40,34 @@ WHERE
 	<field name="transaksi_total_harga" class="java.lang.Double"/>
 	<field name="transaksi_bayar" class="java.lang.Double"/>
 	<field name="transaksi_kembali" class="java.lang.Double"/>
+<<<<<<< HEAD
 	<variable name="total_harga_1" class="java.lang.Double" calculation="Sum">
 		<variableExpression><![CDATA[$F{total_harga}]]></variableExpression>
 	</variable>
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
+<<<<<<< HEAD
 		<band height="118" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="555" height="55" uuid="2f6d29b9-c9db-4657-b2d4-8425d2709e98"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Adobe Caslon Pro Bold" size="30" isBold="true"/>
+=======
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="63" uuid="6d77578f-c075-4fc7-ab9e-567519fdd83b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="30" isBold="true"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[Vape R Store]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="0" y="55" width="555" height="23" uuid="1d58c65d-a0e4-4079-811b-49bbd509a89d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
@@ -88,6 +112,38 @@ WHERE
 			</textField>
 			<textField>
 				<reportElement x="287" y="20" width="100" height="20" uuid="36f6b729-17e4-4216-9c87-01b033671755"/>
+=======
+				<reportElement x="2" y="63" width="555" height="16" uuid="6413411c-e5d7-47d0-8eab-f58e76a2712e"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Hal	:Laporan Penjualan Barang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="75" height="22" uuid="f7ff36f0-1144-4ec5-ad5a-6d183dbf16e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Dari Tanggal :				]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="13" width="100" height="22" uuid="99b260f7-41d5-48cb-a654-fdbf3942e8f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Sampai Tanggal :				]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="85" y="15" width="100" height="20" uuid="ed24d983-f2c7-48d2-bc7c-eede9ed085e2"/>
+				<textFieldExpression><![CDATA[$P{tglT1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="13" width="100" height="20" uuid="40c41589-9316-40f1-a4f6-daf19dbe02ee"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<textFieldExpression><![CDATA[$P{tglT2}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -95,7 +151,11 @@ WHERE
 	<columnHeader>
 		<band height="61" splitType="Stretch">
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="30" y="41" width="73" height="20" uuid="9392ea80-b9e4-4eda-a39f-ccfa009e9034"/>
+=======
+				<reportElement x="113" y="41" width="84" height="20" uuid="886520fb-283d-4f4a-81f0-4ae4097007cf"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -104,6 +164,7 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[id_transaksi]]></text>
@@ -119,11 +180,18 @@ WHERE
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[id_pengguna]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="184" y="41" width="122" height="20" uuid="1c30d9f6-876a-44f3-8ae8-ef4952c72956"/>
+=======
+				<reportElement x="197" y="41" width="92" height="20" uuid="86276c2d-cfe0-4585-acad-49b8f52f2ac8"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -132,12 +200,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="12"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[tanggal_transaksi]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="306" y="41" width="92" height="20" uuid="48dbfa56-97aa-4bf1-b7e5-fcf70f6cbb54"/>
+=======
+				<reportElement x="289" y="41" width="98" height="20" uuid="3023877d-1bae-4855-9513-909c023f3794"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -146,12 +222,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="12"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[total_harga]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="398" y="41" width="76" height="20" uuid="d8937233-f3d1-4863-9a9e-fa6930d26657"/>
+=======
+				<reportElement x="387" y="41" width="80" height="20" uuid="c2624589-3db8-4e96-8897-37c2239557a8"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -160,12 +244,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="12"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[bayar]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="474" y="41" width="78" height="20" uuid="3e6f0bfe-3b17-4e36-bae2-48995d786b54"/>
+=======
+				<reportElement x="467" y="41" width="90" height="20" uuid="50e7305f-360e-4803-8622-fedec691772e"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -174,12 +266,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="12"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<text><![CDATA[kembali]]></text>
 			</staticText>
 			<staticText>
+<<<<<<< HEAD
 				<reportElement x="0" y="41" width="30" height="20" uuid="a1a7a6b6-7792-4543-8469-8eb7af6bcdd1"/>
+=======
+				<reportElement x="24" y="41" width="100" height="20" uuid="0b35b178-17e6-4e1b-bfd5-abfac46bcf2e"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -187,15 +287,41 @@ WHERE
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.5"/>
 				</box>
+<<<<<<< HEAD
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+=======
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="11"/>
+				</textElement>
+				<text><![CDATA[id_transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="41" width="23" height="20" uuid="00797a98-a8dc-4084-bf45-f55ea3601176"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="11"/>
+				</textElement>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<text><![CDATA[No]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
+<<<<<<< HEAD
 		<band height="21" splitType="Stretch">
 			<textField>
 				<reportElement x="30" y="0" width="73" height="20" uuid="b4818c69-1a0c-4d7b-918a-fbe527554011"/>
+=======
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="24" y="0" width="89" height="20" uuid="83d55306-dc9b-4db1-a575-c704df8a0826"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -204,12 +330,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="11"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<textFieldExpression><![CDATA[$F{id_transaksi}]]></textFieldExpression>
 			</textField>
 			<textField>
+<<<<<<< HEAD
 				<reportElement x="103" y="0" width="81" height="20" uuid="493539d3-c4df-4f78-8abb-c8d24a0051c7"/>
+=======
+				<reportElement x="2" y="0" width="22" height="20" uuid="a89f48cc-56b0-4479-b77f-3065a242ea1d"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -218,12 +352,34 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="11"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="84" height="20" uuid="0b8b10c6-12da-4957-9b74-af36fd7132d8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<textFieldExpression><![CDATA[$F{id_pengguna}]]></textFieldExpression>
 			</textField>
 			<textField>
+<<<<<<< HEAD
 				<reportElement x="184" y="0" width="122" height="20" uuid="6c632862-a54e-48f5-b4d0-599fef7b0df5"/>
+=======
+				<reportElement x="197" y="0" width="92" height="20" uuid="36af62d8-b9c1-4fb8-970c-5d6ed5b7e86c"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -232,12 +388,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="11"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tanggal_transaksi}]]></textFieldExpression>
 			</textField>
 			<textField>
+<<<<<<< HEAD
 				<reportElement x="306" y="0" width="92" height="20" uuid="2857f928-76cb-452b-b0e2-ca13352eb256"/>
+=======
+				<reportElement x="289" y="0" width="98" height="20" uuid="0a32faa5-c69c-4a04-b848-83e352d85ecb"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -246,12 +410,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="11"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<textFieldExpression><![CDATA[$F{total_harga}]]></textFieldExpression>
 			</textField>
 			<textField>
+<<<<<<< HEAD
 				<reportElement x="398" y="0" width="76" height="20" uuid="1cfaefc0-4d92-47b4-8324-d352eb81a067"/>
+=======
+				<reportElement x="387" y="0" width="80" height="20" uuid="3e77ad29-4559-40b4-839c-384e0959d2f3"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -260,12 +432,20 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="11"/>
+=======
+					<font fontName="Segoe UI" size="11"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bayar}]]></textFieldExpression>
 			</textField>
 			<textField>
+<<<<<<< HEAD
 				<reportElement x="474" y="0" width="78" height="20" uuid="5baf8d6d-f2dd-4b5f-a139-b1107540c048"/>
+=======
+				<reportElement x="467" y="0" width="90" height="20" uuid="27690df1-8f6a-4e0b-b73b-cf951a863ff0"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -274,6 +454,7 @@ WHERE
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
+<<<<<<< HEAD
 					<font size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{kembali}]]></textFieldExpression>
@@ -292,12 +473,19 @@ WHERE
 				</textElement>
 				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
 			</textField>
+=======
+					<font fontName="Segoe UI" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kembali}]]></textFieldExpression>
+			</textField>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
+<<<<<<< HEAD
 		<band height="55" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
@@ -331,5 +519,11 @@ WHERE
 				<text><![CDATA[Total]]></text>
 			</staticText>
 		</band>
+=======
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 	</summary>
 </jasperReport>

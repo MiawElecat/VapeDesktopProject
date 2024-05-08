@@ -48,8 +48,17 @@ public class FormKategori extends javax.swing.JPanel {
         btnTambah = new javax.swing.JButton();
         txtPencarian = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
         tabelKategori = new javax.swing.JTable();
         btnBatal = new javax.swing.JButton();
+=======
+<<<<<<< HEAD
+        tblKategori = new javax.swing.JTable();
+=======
+        tabelKategori = new javax.swing.JTable();
+        btnBatal = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         pnTambah = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -58,8 +67,18 @@ public class FormKategori extends javax.swing.JPanel {
         txtIdKategori = new javax.swing.JTextField();
         txtNama = new javax.swing.JTextField();
         txtDeskripsi = new javax.swing.JTextField();
+<<<<<<< HEAD
         btnSimpan4 = new javax.swing.JButton();
         btnBatal4 = new javax.swing.JButton();
+=======
+<<<<<<< HEAD
+        btnSimpan = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
+=======
+        btnSimpan4 = new javax.swing.JButton();
+        btnBatal4 = new javax.swing.JButton();
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         pnHeaderTambah = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -87,8 +106,18 @@ public class FormKategori extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         tabelKategori.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tabelKategori.setModel(new javax.swing.table.DefaultTableModel(
+=======
+<<<<<<< HEAD
+        tblKategori.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblKategori.setModel(new javax.swing.table.DefaultTableModel(
+=======
+        tabelKategori.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tabelKategori.setModel(new javax.swing.table.DefaultTableModel(
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -99,6 +128,13 @@ public class FormKategori extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        tblKategori.setRowHeight(30);
+        jScrollPane2.setViewportView(tblKategori);
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         tabelKategori.setRowHeight(30);
         tabelKategori.setShowGrid(false);
         tabelKategori.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,6 +153,10 @@ public class FormKategori extends javax.swing.JPanel {
                 btnBatalActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
         javax.swing.GroupLayout pnUtamaLayout = new javax.swing.GroupLayout(pnUtama);
         pnUtama.setLayout(pnUtamaLayout);
@@ -245,8 +285,18 @@ public class FormKategori extends javax.swing.JPanel {
                             .addComponent(txtIdKategori, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtDeskripsi)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addGap(227, 227, 227)
                         .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+<<<<<<< HEAD
+                        .addGap(228, 228, 228)
+                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                        .addGap(227, 227, 227)
+                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
                         .addGap(30, 30, 30)
                         .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(511, Short.MAX_VALUE))
@@ -263,6 +313,7 @@ public class FormKategori extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
                     .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(46, 46, 46)
@@ -276,6 +327,33 @@ public class FormKategori extends javax.swing.JPanel {
                     .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(538, 538, 538))
+=======
+<<<<<<< HEAD
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41))
+                .addGap(47, 47, 47)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(509, Short.MAX_VALUE))
+=======
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel41)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtDeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(538, 538, 538))
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
         );
 
         javax.swing.GroupLayout pnTambahLayout = new javax.swing.GroupLayout(pnTambah);
@@ -322,6 +400,14 @@ public class FormKategori extends javax.swing.JPanel {
         tabel.setData(search);       
     }//GEN-LAST:event_txtPencarianKeyReleased
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private void btnSimpanbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanbtnSimpanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimpanbtnSimpanActionPerformed
+=======
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private void btnSimpan4btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpan4btnSimpanActionPerformed
         if(btnSimpan4.getText().equals("Perbarui")){
             perbaruiData();
@@ -333,15 +419,29 @@ public class FormKategori extends javax.swing.JPanel {
             SimpanData(); 
         }
     }//GEN-LAST:event_btnSimpan4btnSimpanActionPerformed
+<<<<<<< HEAD
+=======
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
     private void btnBatal4btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatal4btnBatalActionPerformed
         mainPanel.removeAll();
         mainPanel.add(pnUtama);
         mainPanel.repaint();
         mainPanel.revalidate();
+<<<<<<< HEAD
         loadData();
         resetForm();
     }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+=======
+<<<<<<< HEAD
+    }//GEN-LAST:event_btnBatalbtnBatalActionPerformed
+=======
+        loadData();
+        resetForm();
+    }//GEN-LAST:event_btnBatal4btnBatalActionPerformed
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
 
     private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
         loadData();
@@ -361,8 +461,17 @@ public class FormKategori extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
+<<<<<<< HEAD
     private javax.swing.JButton btnBatal4;
     private javax.swing.JButton btnSimpan4;
+=======
+<<<<<<< HEAD
+    private javax.swing.JButton btnSimpan;
+=======
+    private javax.swing.JButton btnBatal4;
+    private javax.swing.JButton btnSimpan4;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JButton btnTambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -377,7 +486,15 @@ public class FormKategori extends javax.swing.JPanel {
     private javax.swing.JScrollPane pnTabelProduk;
     private javax.swing.JPanel pnTambah;
     private javax.swing.JPanel pnUtama;
+<<<<<<< HEAD
     private javax.swing.JTable tabelKategori;
+=======
+<<<<<<< HEAD
+    private javax.swing.JTable tblKategori;
+=======
+    private javax.swing.JTable tabelKategori;
+>>>>>>> af16e1bd744c7ce6e6547398b656ff337dc3c10e
+>>>>>>> 23c2c291162e771ef776874d785569f48b9bf978
     private javax.swing.JTextField txtDeskripsi;
     private javax.swing.JTextField txtIdKategori;
     private javax.swing.JTextField txtNama;
