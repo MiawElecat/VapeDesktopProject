@@ -17,6 +17,7 @@ Proyek ini masih dalam tahap pengembangan aktif. Fitur-fitur yang sedang dikerja
 - CRUD Menu Transaksi
 - Menu Laporan Penjualan dan Pembelian
 - Cetak Struk dengan rapi
+- Fix Bug
 
 Kami menganjurkan untuk tidak menggunakan aplikasi ini dalam lingkungan produksi sampai rilis resmi dikeluarkan.
 
@@ -25,7 +26,7 @@ Berikut adalah beberapa fitur yang telah diimplementasikan:
 
 - Login dan Register dengan pengguna Owner dan Karyawan
 - Data Master dengan trigger
-- UI Flatlaf
+- Flatlaf UI
 
 ## Kontribusi
 Kami menyambut kontribusi dari komunitas. Jika Anda ingin berkontribusi, silakan fork repositori ini, buat perubahan, dan kirimkan Pull Request.
