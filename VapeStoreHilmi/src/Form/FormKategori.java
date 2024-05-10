@@ -4,6 +4,7 @@
  */
 package Form;
 
+import com.formdev.flatlaf.FlatClientProperties;
 import java.util.List;
 import javax.swing.JOptionPane;
 import vape.DAO.DAO_Kategori;
@@ -25,6 +26,7 @@ public class FormKategori extends javax.swing.JPanel {
      */
     public FormKategori() {
         initComponents();
+        setLayoutForm();
         
         tabelKategori.setModel(tabel);
         loadData();
@@ -160,7 +162,7 @@ public class FormKategori extends javax.swing.JPanel {
                         .addComponent(btnBatal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pnTabelProduk.setViewportView(pnUtama);
@@ -223,37 +225,43 @@ public class FormKategori extends javax.swing.JPanel {
             .addGroup(pnHeaderTambahLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel11)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel40)
-                            .addComponent(jLabel41))
-                        .addGap(57, 57, 57)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
-                            .addComponent(txtIdKategori, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtDeskripsi)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel39)
+                                    .addComponent(jLabel40)
+                                    .addComponent(jLabel41))
+                                .addGap(57, 57, 57)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
+                                    .addComponent(txtIdKategori, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtDeskripsi)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(227, 227, 227)
+                                .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 505, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
-                        .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(511, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(pnHeaderTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -383,7 +391,14 @@ public class FormKategori extends javax.swing.JPanel {
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtPencarian;
     // End of variables declaration//GEN-END:variables
-private void loadData() {
+    
+    private void setLayoutForm() {
+        pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+    }
+    
+    private void loadData() {
         btnTambah.setText("Tambah Kategori");
         btnSimpan4.setText("Simpan");
         btnBatal.setVisible(false);

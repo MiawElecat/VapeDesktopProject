@@ -4,6 +4,8 @@
  */
 package Form;
 
+import com.formdev.flatlaf.FlatClientProperties;
+
 /**
  *
  * @author Miaw
@@ -15,6 +17,7 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
      */
     public FormTransaksiPembelian() {
         initComponents();
+        setLayoutForm();
     }
 
     /**
@@ -151,7 +154,7 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 2830, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -261,10 +264,12 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
         jLabel11.setText("Transaksi Pembelian");
 
         jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel49.setText("ID Pengguna");
 
         jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("Nama Pengguna");
 
@@ -292,7 +297,7 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                     .addComponent(jLabel51))
                 .addGap(10, 10, 10)
                 .addComponent(jLabel11)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/search-alt-2-regular-24.png"))); // NOI18N
@@ -356,7 +361,6 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -414,10 +418,15 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)))
                 .addGap(32, 32, 32))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(pnHeaderTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -476,7 +485,7 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
                             .addComponent(btnSimpan4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(2478, 2478, 2478))
         );
 
         javax.swing.GroupLayout pnTambahLayout = new javax.swing.GroupLayout(pnTambah);
@@ -586,4 +595,11 @@ public class FormTransaksiPembelian extends javax.swing.JPanel {
     private javax.swing.JTextField txtPencarian;
     private javax.swing.JTextField txtProduk;
     // End of variables declaration//GEN-END:variables
+
+    private void setLayoutForm() {
+        pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+    }
+
 }

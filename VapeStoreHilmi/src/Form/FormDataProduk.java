@@ -1,6 +1,11 @@
 package Form;
 
 import com.formdev.flatlaf.FlatClientProperties;
+import com.formdev.flatlaf.util.UIScale;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.LayoutManager;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,6 +41,7 @@ public class FormDataProduk extends javax.swing.JPanel {
 
     public FormDataProduk() {
         initComponents();
+        setLayoutForm();
         kategoriMap = new HashMap<>();
         distributorMap = new HashMap<>();
         tabelproduk.setModel(tabel);
@@ -294,7 +300,6 @@ public class FormDataProduk extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,12 +336,17 @@ public class FormDataProduk extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(573, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(pnHeaderTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
                     .addComponent(txtIdProduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -544,6 +554,51 @@ public class FormDataProduk extends javax.swing.JPanel {
     private javax.swing.JTextField txtPencarian;
     private javax.swing.JTextField txtProduk;
     // End of variables declaration//GEN-END:variables
+    
+    private void setLayoutForm() {
+        pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+    }
+    
+    private class panel implements LayoutManager {
+
+        @Override
+        public void addLayoutComponent(String name, Component comp) {
+        }
+
+        @Override
+        public void removeLayoutComponent(Component comp) {
+        }
+
+        @Override
+        public Dimension preferredLayoutSize(Container parent) {
+            synchronized (parent.getTreeLock()) {
+                return new Dimension(0, 0);
+            }
+        }
+
+        @Override
+        public Dimension minimumLayoutSize(Container parent) {
+            synchronized (parent.getTreeLock()) {
+                return new Dimension(0, 0);
+            }
+        }
+
+        @Override
+        public void layoutContainer(Container parent) {
+            synchronized (parent.getTreeLock()) {
+                int width = parent.getWidth();
+                int height = parent.getHeight();
+                int loginWidth = UIScale.scale(420);
+                int loginHeight = pnHeaderTambah.getPreferredSize().height;
+                int x = (width - loginWidth) / 2;
+                int y = (height - loginHeight) / 2;
+                pnHeaderTambah.setBounds(x, y, loginWidth, loginHeight);
+            }
+        }
+    }
+    
     private void nomorOtomatis(){
         if(cbxKategori.getSelectedItem()!= null){
         String character = (String) cbxKategori.getSelectedItem();

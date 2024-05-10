@@ -4,6 +4,7 @@
  */
 package Form;
 
+import com.formdev.flatlaf.FlatClientProperties;
 import java.util.List;
 import javax.swing.JOptionPane;
 import vape.DAO.DAO_Distributor;
@@ -25,6 +26,7 @@ public class FormDistributor extends javax.swing.JPanel {
      */
     public FormDistributor() {
         initComponents();
+        setLayoutForm();
         
         
         tabeldistributor.setModel(tabel);
@@ -232,7 +234,7 @@ public class FormDistributor extends javax.swing.JPanel {
             .addGroup(pnHeaderTambahLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel11)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -260,11 +262,15 @@ public class FormDistributor extends javax.swing.JPanel {
                         .addGap(30, 30, 30)
                         .addComponent(btnBatal4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(539, 539, 539))
-            .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnHeaderTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(pnHeaderTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -402,7 +408,14 @@ public class FormDistributor extends javax.swing.JPanel {
     private javax.swing.JTextField txtNomor;
     private javax.swing.JTextField txtPencarian;
     // End of variables declaration//GEN-END:variables
- private void loadData() {
+    
+    private void setLayoutForm() {
+        pnHeaderTambah.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+    }
+    
+    private void loadData() {
         btnTambah.setText("Tambah Distributor");
         btnSimpan4.setText("Simpan");
         btnBatal.setVisible(false);
