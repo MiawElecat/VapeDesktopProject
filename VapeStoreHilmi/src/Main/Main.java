@@ -79,10 +79,10 @@ public class Main extends JLayeredPane {
         menu.addMenuEvent((int index, int subIndex, MenuAction action) -> {
             if(model.getLevel()!= null){
             if (index == 0) {
-                MenuUtama.showForm(new FormDashboard());
+                MenuUtama.showForm(new FormDashboard(model));
             } else if (model.getLevel().equals("Owner")) {
                 if (index == 0) {
-                MenuUtama.showForm(new FormDashboard());
+                MenuUtama.showForm(new FormDashboard(model));
                 }else if(index == 1 ) {
                 MenuUtama.showForm(new FormTransaksiPenjualan(model));
                 } else if (index == 2) {
@@ -111,7 +111,7 @@ public class Main extends JLayeredPane {
             } else if (model.getLevel().equals("Karyawan")){
                 
              if (index == 0) {
-               MenuUtama.showForm(new FormDashboard());
+               MenuUtama.showForm(new FormDashboard(model));
             } else if (index == 1) {
                MenuUtama.showForm(new FormTransaksiPenjualan(model));
             } else if (index == 7) {
