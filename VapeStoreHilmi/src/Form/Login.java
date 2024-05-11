@@ -86,6 +86,7 @@ public class Login extends javax.swing.JPanel {
         lbPass = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         btnRegister = new javax.swing.JButton();
+        btnLupaPass = new javax.swing.JButton();
 
         lbLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logo.png"))); // NOI18N
@@ -132,31 +133,37 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
+        btnLupaPass.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLupaPass.setForeground(new java.awt.Color(255, 255, 255));
+        btnLupaPass.setText("Lupa Password");
+
         javax.swing.GroupLayout pnLoginLayout = new javax.swing.GroupLayout(pnLogin);
         pnLogin.setLayout(pnLoginLayout);
         pnLoginLayout.setHorizontalGroup(
             pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnLoginLayout.createSequentialGroup()
-                .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnLoginLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnLoginLayout.createSequentialGroup()
-                                .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbUser)
-                                    .addComponent(lbPass))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(txtPass)
-                            .addComponent(txtUser)
-                            .addComponent(lbTitle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbLogo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(pnLoginLayout.createSequentialGroup()
-                        .addGap(150, 150, 150)
+                .addContainerGap()
+                .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnLoginLayout.createSequentialGroup()
                         .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRegister)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 146, Short.MAX_VALUE)))
+                            .addComponent(lbUser)
+                            .addComponent(lbPass))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(txtPass)
+                    .addComponent(txtUser)
+                    .addComponent(lbTitle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                    .addComponent(lbLogo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnLoginLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRegister)
+                    .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(184, 184, 184))
+            .addGroup(pnLoginLayout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(btnLupaPass)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnLoginLayout.setVerticalGroup(
             pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,11 +180,13 @@ public class Login extends javax.swing.JPanel {
                 .addComponent(lbPass)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(btnLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegister)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLupaPass)
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -194,7 +203,7 @@ public class Login extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(pnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -215,13 +224,14 @@ public class Login extends javax.swing.JPanel {
         home.setVisible(true);
         home.revalidate();
         
-        dispose();        // TODO addS your handling code here:
+        dispose();
     }//GEN-LAST:event_btnLoginMouseClicked
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLupaPass;
     private javax.swing.JButton btnRegister;
     private javax.swing.JLabel lbLogo;
     private javax.swing.JLabel lbPass;
@@ -251,6 +261,9 @@ public class Login extends javax.swing.JPanel {
                 + "borderWidth:0;"
                 + "focusWidth:0");
         btnRegister.putClientProperty(FlatClientProperties.STYLE, "" 
+                + "background:null;"
+                );
+        btnLupaPass.putClientProperty(FlatClientProperties.STYLE, "" 
                 + "background:null;"
                 );
         txtUser.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Username");
@@ -298,11 +311,12 @@ public class Login extends javax.swing.JPanel {
             synchronized (parent.getTreeLock()) {
                 int width = parent.getWidth();
                 int height = parent.getHeight();
-                int loginWidth = UIScale.scale(420);
-                int loginHeight = pnLogin.getPreferredSize().height;
+                int loginWidth = UIScale.scale(500);
+                int loginHeight = UIScale.scale(435);
                 int x = (width - loginWidth) / 2;
                 int y = (height - loginHeight) / 2;
                 pnLogin.setBounds(x, y, loginWidth, loginHeight);
+                btnLogin.setBounds(x, y, width, btnLogin.getPreferredSize().height);
             }
         }
     }
@@ -312,7 +326,7 @@ public class Login extends javax.swing.JPanel {
     private final int titleGap = 10;
     private final int textGap = 10;
     private final int labelGap = 10;
-    private final int buttonGap = 20;
+    private final int buttonGap = 9;
 
     @Override
     public void addLayoutComponent(String name, Component comp) {
@@ -343,6 +357,7 @@ public class Login extends javax.swing.JPanel {
             height += UIScale.scale(buttonGap);
             height += btnLogin.getPreferredSize().height;
             height += btnRegister.getPreferredSize().height;
+            height += btnLupaPass.getPreferredSize().height;
             return new Dimension(0, height);
         }
     }
@@ -378,10 +393,22 @@ public void layoutContainer(Container parent) {
         txtPass.setBounds(x, y, width, txtPass.getPreferredSize().height);
         y += txtPass.getPreferredSize().height + UIScale.scale(buttonGap);
 
-        btnLogin.setBounds(x, y, width, btnLogin.getPreferredSize().height);
+        btnLogin.setBounds(x, 300, width, btnLogin.getPreferredSize().height);
         y += btnLogin.getPreferredSize().height + UIScale.scale(buttonGap);
 
-        btnRegister.setBounds(x, y, width, btnRegister.getPreferredSize().height);
+        btnRegister.setBounds(x, 335, width, btnRegister.getPreferredSize().height);
+        y += btnRegister.getPreferredSize().height + UIScale.scale(buttonGap);
+       
+        btnLupaPass.setBounds(x, 370, width, btnRegister.getPreferredSize().height);
+        y += btnLupaPass.getPreferredSize().height + UIScale.scale(buttonGap);
+        
+        btnLupaPass.setOpaque(false);
+        btnLupaPass.setContentAreaFilled(false);
+        btnLupaPass.setBorderPainted(false);
+        btnRegister.setOpaque(false);
+        btnRegister.setContentAreaFilled(false);
+        btnRegister.setBorderPainted(false);
+        
     }
 }
 

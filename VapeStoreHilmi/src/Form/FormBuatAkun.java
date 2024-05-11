@@ -4,6 +4,7 @@
  */
 package Form;
 
+import com.formdev.flatlaf.FlatClientProperties;
 import javax.swing.JOptionPane;
 import vape.DAO.DAO_Pengguna;
 import vape.model.ModelPengguna;
@@ -20,6 +21,7 @@ public class FormBuatAkun extends javax.swing.JDialog {
     public FormBuatAkun(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLayoutForm();
         setLocationRelativeTo(null);
     }
 
@@ -34,7 +36,7 @@ public class FormBuatAkun extends javax.swing.JDialog {
 
         mainPanel = new javax.swing.JPanel();
         pnPilihPengguna = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        pnRegister = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnOwner = new javax.swing.JButton();
         btnKaryawan = new javax.swing.JButton();
@@ -42,46 +44,47 @@ public class FormBuatAkun extends javax.swing.JDialog {
         lbTitle = new javax.swing.JLabel();
         lbLogo = new javax.swing.JLabel();
         pnOwner = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        pnSetOwner = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        btnKembaliPilih = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         txtIdOwner = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         txtNamaOwn = new javax.swing.JTextField();
         txtLevelOwn = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         txtTeleponOwn = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         txtEmailOwn = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
         txtPasswordOwn = new javax.swing.JTextField();
-        btnKembaliPilih = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         btnBuatAkunOwn = new javax.swing.JButton();
         pnKaryawan = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        pnSetKaryawan = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         btnKembaliPilih1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         txtIdKaryawan = new javax.swing.JTextField();
         txtNamaKar = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         txtLevelKar = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
         txtTeleponKar = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         txtEmailKar = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
         txtPasswordKar = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         btnBuatAkunKar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new java.awt.CardLayout());
 
         mainPanel.setLayout(new java.awt.CardLayout());
 
-        jPanel1.setBackground(new java.awt.Color(72, 63, 139));
+        pnRegister.setBackground(new java.awt.Color(72, 63, 139));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,34 +124,34 @@ public class FormBuatAkun extends javax.swing.JDialog {
         lbLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logo.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnRegisterLayout = new javax.swing.GroupLayout(pnRegister);
+        pnRegister.setLayout(pnRegisterLayout);
+        pnRegisterLayout.setHorizontalGroup(
+            pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnRegisterLayout.createSequentialGroup()
+                .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnRegisterLayout.createSequentialGroup()
+                        .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnRegisterLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
                                 .addComponent(btnKembaliLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(pnRegisterLayout.createSequentialGroup()
                                 .addGap(199, 199, 199)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(btnKaryawan)
                                     .addComponent(btnOwner, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 202, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 203, Short.MAX_VALUE))
+                    .addGroup(pnRegisterLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnRegisterLayout.setVerticalGroup(
+            pnRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnRegisterLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(lbLogo)
                 .addGap(18, 18, 18)
@@ -159,7 +162,7 @@ public class FormBuatAkun extends javax.swing.JDialog {
                 .addComponent(btnOwner)
                 .addGap(18, 18, 18)
                 .addComponent(btnKaryawan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                 .addComponent(btnKembaliLogin)
                 .addGap(23, 23, 23))
         );
@@ -168,56 +171,27 @@ public class FormBuatAkun extends javax.swing.JDialog {
         pnPilihPengguna.setLayout(pnPilihPenggunaLayout);
         pnPilihPenggunaLayout.setHorizontalGroup(
             pnPilihPenggunaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnPilihPenggunaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnPilihPenggunaLayout.setVerticalGroup(
             pnPilihPenggunaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnPilihPenggunaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         mainPanel.add(pnPilihPengguna, "card2");
 
-        jPanel2.setBackground(new java.awt.Color(72, 63, 139));
+        pnSetOwner.setBackground(new java.awt.Color(72, 63, 139));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Buat Akun Owner");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel2)
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("ID Owner");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Nama");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Level");
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("Telepon");
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Email");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setText("Password");
 
         btnKembaliPilih.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnKembaliPilih.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/arrow-back-regular-24.png"))); // NOI18N
@@ -228,6 +202,30 @@ public class FormBuatAkun extends javax.swing.JDialog {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("ID Owner");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Nama");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Level");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Telepon");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Email");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Password");
+
         btnBuatAkunOwn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnBuatAkunOwn.setText("Buat Akun");
         btnBuatAkunOwn.addActionListener(new java.awt.event.ActionListener() {
@@ -236,98 +234,104 @@ public class FormBuatAkun extends javax.swing.JDialog {
             }
         });
 
-        javax.swing.GroupLayout pnOwnerLayout = new javax.swing.GroupLayout(pnOwner);
-        pnOwner.setLayout(pnOwnerLayout);
-        pnOwnerLayout.setHorizontalGroup(
-            pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(pnOwnerLayout.createSequentialGroup()
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnOwnerLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnKembaliPilih)
-                            .addGroup(pnOwnerLayout.createSequentialGroup()
-                                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
+        javax.swing.GroupLayout pnSetOwnerLayout = new javax.swing.GroupLayout(pnSetOwner);
+        pnSetOwner.setLayout(pnSetOwnerLayout);
+        pnSetOwnerLayout.setHorizontalGroup(
+            pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSetOwnerLayout.createSequentialGroup()
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnSetOwnerLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnSetOwnerLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnSetOwnerLayout.createSequentialGroup()
+                                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
+                                    .addComponent(jLabel3)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8))
-                                .addGap(50, 50, 50)
-                                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtIdOwner)
-                                    .addComponent(txtNamaOwn)
-                                    .addComponent(txtLevelOwn)
-                                    .addComponent(txtTeleponOwn)
-                                    .addComponent(txtEmailOwn)
-                                    .addComponent(txtPasswordOwn, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(pnOwnerLayout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(btnBuatAkunOwn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                                .addGap(26, 26, 26)
+                                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtEmailOwn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+                                    .addComponent(txtTeleponOwn, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtLevelOwn, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNamaOwn, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtIdOwner, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPasswordOwn)))
+                            .addComponent(btnKembaliPilih))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(pnSetOwnerLayout.createSequentialGroup()
+                .addGap(193, 193, 193)
+                .addComponent(btnBuatAkunOwn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(202, Short.MAX_VALUE))
+        );
+        pnSetOwnerLayout.setVerticalGroup(
+            pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSetOwnerLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2)
+                .addGap(33, 33, 33)
+                .addComponent(btnKembaliPilih, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIdOwner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNamaOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtLevelOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTeleponOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEmailOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPasswordOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(31, 31, 31)
+                .addComponent(btnBuatAkunOwn)
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnOwnerLayout = new javax.swing.GroupLayout(pnOwner);
+        pnOwner.setLayout(pnOwnerLayout);
+        pnOwnerLayout.setHorizontalGroup(
+            pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnOwnerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnSetOwner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnOwnerLayout.setVerticalGroup(
             pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnOwnerLayout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnKembaliPilih, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIdOwner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNamaOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLevelOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTeleponOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(18, 18, 18)
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmailOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
-                .addGroup(pnOwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPasswordOwn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(41, 41, 41)
-                .addComponent(btnBuatAkunOwn)
-                .addGap(0, 115, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(pnSetOwner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         mainPanel.add(pnOwner, "card3");
 
-        jPanel3.setBackground(new java.awt.Color(72, 63, 139));
+        pnSetKaryawan.setBackground(new java.awt.Color(72, 63, 139));
+        pnSetKaryawan.setPreferredSize(new java.awt.Dimension(509, 569));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Buat Akun Karyawan");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel9)
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
 
         btnKembaliPilih1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnKembaliPilih1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/arrow-back-regular-24.png"))); // NOI18N
@@ -339,21 +343,27 @@ public class FormBuatAkun extends javax.swing.JDialog {
         });
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("ID Karyawan");
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Nama");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Level");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Telepon");
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Email");
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Password");
 
         btnBuatAkunKar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -364,71 +374,93 @@ public class FormBuatAkun extends javax.swing.JDialog {
             }
         });
 
+        javax.swing.GroupLayout pnSetKaryawanLayout = new javax.swing.GroupLayout(pnSetKaryawan);
+        pnSetKaryawan.setLayout(pnSetKaryawanLayout);
+        pnSetKaryawanLayout.setHorizontalGroup(
+            pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSetKaryawanLayout.createSequentialGroup()
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnSetKaryawanLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnSetKaryawanLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnKembaliPilih1)
+                            .addGroup(pnSetKaryawanLayout.createSequentialGroup()
+                                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel15))
+                                .addGap(15, 15, 15)
+                                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtPasswordKar, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                                    .addComponent(txtEmailKar)
+                                    .addComponent(txtLevelKar)
+                                    .addComponent(txtNamaKar)
+                                    .addComponent(txtIdKaryawan)
+                                    .addComponent(txtTeleponKar, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(pnSetKaryawanLayout.createSequentialGroup()
+                .addGap(187, 187, 187)
+                .addComponent(btnBuatAkunKar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(208, Short.MAX_VALUE))
+        );
+        pnSetKaryawanLayout.setVerticalGroup(
+            pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnSetKaryawanLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel9)
+                .addGap(31, 31, 31)
+                .addComponent(btnKembaliPilih1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtIdKaryawan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNamaKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtLevelKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTeleponKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEmailKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(18, 18, 18)
+                .addGroup(pnSetKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPasswordKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addGap(30, 30, 30)
+                .addComponent(btnBuatAkunKar)
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout pnKaryawanLayout = new javax.swing.GroupLayout(pnKaryawan);
         pnKaryawan.setLayout(pnKaryawanLayout);
         pnKaryawanLayout.setHorizontalGroup(
             pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnKaryawanLayout.createSequentialGroup()
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnKaryawanLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnKembaliPilih1)
-                            .addGroup(pnKaryawanLayout.createSequentialGroup()
-                                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15))
-                                .addGap(39, 39, 39)
-                                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtIdKaryawan)
-                                    .addComponent(txtNamaKar)
-                                    .addComponent(txtLevelKar)
-                                    .addComponent(txtTeleponKar)
-                                    .addComponent(txtEmailKar)
-                                    .addComponent(txtPasswordKar, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(pnKaryawanLayout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(btnBuatAkunKar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(pnSetKaryawan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnKaryawanLayout.setVerticalGroup(
             pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnKaryawanLayout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnKembaliPilih1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIdKaryawan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNamaKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
-                .addGap(18, 18, 18)
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLevelKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addGap(18, 18, 18)
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTeleponKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addGap(18, 18, 18)
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmailKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
-                .addGap(18, 18, 18)
-                .addGroup(pnKaryawanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPasswordKar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
-                .addGap(40, 40, 40)
-                .addComponent(btnBuatAkunKar)
-                .addGap(0, 115, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(pnSetKaryawan, javax.swing.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         mainPanel.add(pnKaryawan, "card4");
@@ -586,15 +618,15 @@ public class FormBuatAkun extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lbLogo;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel pnKaryawan;
     private javax.swing.JPanel pnOwner;
     private javax.swing.JPanel pnPilihPengguna;
+    private javax.swing.JPanel pnRegister;
+    private javax.swing.JPanel pnSetKaryawan;
+    private javax.swing.JPanel pnSetOwner;
     private javax.swing.JTextField txtEmailKar;
     private javax.swing.JTextField txtEmailOwn;
     private javax.swing.JTextField txtIdKaryawan;
@@ -609,6 +641,30 @@ public class FormBuatAkun extends javax.swing.JDialog {
     private javax.swing.JTextField txtTeleponOwn;
     // End of variables declaration//GEN-END:variables
 
+    private void setLayoutForm() {
+        pnRegister.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+        pnSetOwner.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+        pnSetKaryawan.putClientProperty(FlatClientProperties.STYLE, ""
+                + "background:rgb(72,63,139);"
+                + "arc:20;");
+        txtEmailKar.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Email");
+        txtEmailOwn.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Email");
+        txtIdKaryawan.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "ID Karyawan");
+        txtIdOwner.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "ID Owner");
+        txtLevelKar.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Level");
+        txtLevelOwn.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Level");
+        txtNamaKar.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Nama");
+        txtNamaOwn.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Nama");
+        txtPasswordKar.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Password");
+        txtPasswordOwn.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Password");
+        txtTeleponKar.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "No. Telepon");
+        txtTeleponOwn.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "No. Telepon");
+    }
+    
     private void resetOwnerForm() {
         txtIdOwner.setText("");
         txtNamaOwn.setText("");
