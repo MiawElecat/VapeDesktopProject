@@ -28,9 +28,6 @@ Berikut adalah beberapa fitur yang telah diimplementasikan:
 - Data Master dengan trigger
 - Flatlaf UI
 
-## Kontribusi
-Kami menyambut kontribusi dari komunitas. Jika Anda ingin berkontribusi, silakan fork repositori ini, buat perubahan, dan kirimkan Pull Request.
-
 ## Hak Cipta dan Lisensi
 ©2024 Team Project SIPIT. Hak Cipta Dilindungi.
 
