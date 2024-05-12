@@ -239,7 +239,7 @@ public class FormTransaksiPenjualan extends javax.swing.JPanel {
                                 .addComponent(btnBatalUtm)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txtPencarian, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(139, 139, 139))
+                                .addGap(57, 57, 57))
                             .addGroup(pnUtamaLayout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
