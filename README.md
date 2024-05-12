@@ -1,4 +1,4 @@
-# Aplikasi Manajemen Vape Store
+# Aplikasi Manajemen Vape Store (Java)
 
 ## ⚠️ Peringatan
 **Project Aplikasi Vape Store ini masih dalam tahap pengembangan dan belum full rilis.**
